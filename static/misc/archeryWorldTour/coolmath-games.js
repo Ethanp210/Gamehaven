@@ -128,7 +128,7 @@ if (false && siteRegEx.test(document.domain) === false) {
                     var cw = document.getElementById("canvas-wrapper");
                     if(cw) {
                         cw.style.backgroundColor = "#000000";
-                        cw.innerHTML = '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; margin: 0 auto; max-width: 300px;"><div style="background: url(images/uiElements.png) no-repeat 0 0; width: 225px; background-size: 500px auto; height: 60px; margin: 0 auto 20px auto;"></div><h2 style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: normal; line-height: 130%; color: #fff; text-align: center;">Unfortunately, Archery World Tour doesn\'t work in your web browser.<br><br>Please use a different browser and try again!</h2></div>';
+                        cw.innerHTML = '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; margin: 0 auto; max-width: 300px;"><div style="background: url(images/uiElements.webp) no-repeat 0 0; width: 225px; background-size: 500px auto; height: 60px; margin: 0 auto 20px auto;"></div><h2 style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: normal; line-height: 130%; color: #fff; text-align: center;">Unfortunately, Archery World Tour doesn\'t work in your web browser.<br><br>Please use a different browser and try again!</h2></div>';
                     }
                     break;
                 default:

@@ -642,7 +642,7 @@ fg_api.prototype.adsModule = function() {
 			self.modal.close();
 
 			/*if (typeof google === "undefined" && detection.is.pc) {
-				var btn = faZepto("<div><h1 style='font-weight:normal;color:#647999; text-align: center; padding: 30px 0 10px 0 !important;'>Please disable your AdBlocker on this site to play our games!<img src='//games.cdn.famobi.com/html5games/gameapi/CandyInTears.png' alt='' style='margin: 0 auto; display: block; width: 270px; margin-top: 20px;'></h1><span style='display:inline-block;padding:15px;border:5px solid #647999;font-weight:bold; color: #647999;'>Done? Refresh this page.</span><br><br><span style='color:#647999; display: block; margin-bottom: 30px; opacity: 0.8;'><strong>Why?</strong> Some functionality is incorrectly blocked by AdBlockers</span><iframe src='//giphy.com/embed/RL6gd7A8xvLYA' width='320' height='246' frameBorder='0' allowFullScreen></iframe></div>").appendTo("body").css({"display": "block !important", "position": "absolute", "top": "0", "bottom": "0", "color": "#333", "width": "100%", "cursor": "pointer", "font-size": "14px", "background-color": "#d1f6ff", "overflow-y": "scroll", "font-family": "Helvetica, Arial, sans-serif", "text-align": "center", "z-index": self.rand(900000, 999999)});
+				var btn = faZepto("<div><h1 style='font-weight:normal;color:#647999; text-align: center; padding: 30px 0 10px 0 !important;'>Please disable your AdBlocker on this site to play our games!<img src='//games.cdn.famobi.com/html5games/gameapi/CandyInTears.webp' alt='' style='margin: 0 auto; display: block; width: 270px; margin-top: 20px;'></h1><span style='display:inline-block;padding:15px;border:5px solid #647999;font-weight:bold; color: #647999;'>Done? Refresh this page.</span><br><br><span style='color:#647999; display: block; margin-bottom: 30px; opacity: 0.8;'><strong>Why?</strong> Some functionality is incorrectly blocked by AdBlockers</span><iframe src='//giphy.com/embed/RL6gd7A8xvLYA' width='320' height='246' frameBorder='0' allowFullScreen></iframe></div>").appendTo("body").css({"display": "block !important", "position": "absolute", "top": "0", "bottom": "0", "color": "#333", "width": "100%", "cursor": "pointer", "font-size": "14px", "background-color": "#d1f6ff", "overflow-y": "scroll", "font-family": "Helvetica, Arial, sans-serif", "text-align": "center", "z-index": self.rand(900000, 999999)});
 				self.handleClick(btn.get(0), function() {
 					window.location.reload();
 				});
@@ -3742,7 +3742,7 @@ fg_api.prototype.orientationModule = function() {
 				M.fgLandscapeOverlay.setAttribute("id", "fg-landscape-overlay");
 
 				M.fgLandscapeImage = document.createElement("img");
-				M.fgLandscapeImage.setAttribute("src", "html5games/gameapi/v1/images/RotateToLandscape.png");
+				M.fgLandscapeImage.setAttribute("src", "html5games/gameapi/v1/images/RotateToLandscape.webp");
 				M.fgLandscapeImage.setAttribute("class", "fg-orientation-icon");
 				M.fgLandscapeImage.setAttribute("alt", "switch to landscape");
 				M.fgLandscapeOverlay.appendChild(M.fgLandscapeImage);
@@ -3755,7 +3755,7 @@ fg_api.prototype.orientationModule = function() {
 				M.fgPortraitOverlay.setAttribute("id", "fg-portrait-overlay");
 
 				M.fgPortraitImage = document.createElement("img");
-				M.fgPortraitImage.setAttribute("src", "html5games/gameapi/v1/images/RotateToPortrait.png");
+				M.fgPortraitImage.setAttribute("src", "html5games/gameapi/v1/images/RotateToPortrait.webp");
 				M.fgPortraitImage.setAttribute("class", "fg-orientation-icon");
 				M.fgPortraitImage.setAttribute("alt", "switch to portrait");
 				M.fgPortraitOverlay.appendChild(M.fgPortraitImage);
@@ -5194,7 +5194,7 @@ fg_api.prototype.flashModule = function() {
 						"target": "_blank"
 					});
 					fgGetFlash = self.createElement("img", {
-						"src": "/flashgames/swfobject/getFlash.png",
+						"src": "/flashgames/swfobject/getFlash.webp",
 						"alt": "Get Adobe Flash player",
 						"title": "Get Adobe Flash player"
 					});
@@ -5721,7 +5721,7 @@ fg_api.prototype.init = function() {
 			moreGamesImg.onload = resolve;
 			moreGamesImg.onerror = function() {
 				if (self.config.game_i18n.current) {
-					self.config.game_i18n.current.more_games_image = "html5games/branding/default/More_Games600x253_transparent.png";
+					self.config.game_i18n.current.more_games_image = "html5games/branding/default/More_Games600x253_transparent.webp";
 				}
 				resolve();
 			}

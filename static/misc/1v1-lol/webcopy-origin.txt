@@ -2,8 +2,8 @@ Uri: https://1v1.lol/
 File Name: C:\Downloaded Web Sites\1v1.lol\index.htm
 Content Type: text/html
 
-Uri: https://1v1.lol/favicon.png?v2
-File Name: C:\Downloaded Web Sites\1v1.lol\favicon.png
+Uri: https://1v1.lol/favicon.webp?v2
+File Name: C:\Downloaded Web Sites\1v1.lol\favicon.webp
 Content Type: image/png
 
 Uri: https://1v1.lol/assets/css/style.css
@@ -42,8 +42,8 @@ Uri: https://1v1.lol/js/cpmstar.js
 File Name: C:\Downloaded Web Sites\1v1.lol\js\cpmstar.js
 Content Type: text/javascript
 
-Uri: https://1v1.lol/logo.png
-File Name: C:\Downloaded Web Sites\1v1.lol\logo.png
+Uri: https://1v1.lol/logo.webp
+File Name: C:\Downloaded Web Sites\1v1.lol\logo.webp
 Content Type: image/png
 
 Uri: https://justbuild.nyc3.cdn.digitaloceanspaces.com/CI/1v1/Prod/162/UnityLoader.js

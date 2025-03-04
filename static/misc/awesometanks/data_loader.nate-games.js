@@ -9577,7 +9577,7 @@ Math.sign || (Math.sign = function(t) {
                     return this
                 },
                 image: function(t, e, i) {
-                    return this.addToFileList("image", t, e, void 0, i, ".png")
+                    return this.addToFileList("image", t, e, void 0, i, ".webp")
                 },
                 images: function(t, e) {
                     if (Array.isArray(e))
@@ -9618,7 +9618,7 @@ Math.sign || (Math.sign = function(t) {
                         frameMax: s,
                         margin: n,
                         spacing: r
-                    }, !1, ".png")
+                    }, !1, ".webp")
                 },
                 audio: function(t, e, i) {
                     return this.game.sound.noAudio ? this : (void 0 === i && (i = !0), "string" == typeof e && (e = [e]), this.addToFileList("audio", t, e, {
@@ -9660,7 +9660,7 @@ Math.sign || (Math.sign = function(t) {
                         }), this
                 },
                 bitmapFont: function(t, e, i, o, s, n) {
-                    if (void 0 !== e && null !== e || (e = t + ".png"), void 0 === i && (i = null), void 0 === o && (o = null), null === i && null === o && (i = t + ".xml"), void 0 === s && (s = 0), void 0 === n && (n = 0), i) this.addToFileList("bitmapfont", t, e, {
+                    if (void 0 !== e && null !== e || (e = t + ".webp"), void 0 === i && (i = null), void 0 === o && (o = null), null === i && null === o && (i = t + ".xml"), void 0 === s && (s = 0), void 0 === n && (n = 0), i) this.addToFileList("bitmapfont", t, e, {
                         atlasURL: i,
                         xSpacing: s,
                         ySpacing: n
@@ -9693,7 +9693,7 @@ Math.sign || (Math.sign = function(t) {
                     return void 0 === o && (o = null), void 0 === s && (s = null), o || s || (o = t + ".xml"), this.atlas(t, e, o, s, i.Loader.TEXTURE_ATLAS_XML_STARLING)
                 },
                 atlas: function(t, e, o, s, n) {
-                    if (void 0 !== e && null !== e || (e = t + ".png"), void 0 === o && (o = null), void 0 === s && (s = null), void 0 === n && (n = i.Loader.TEXTURE_ATLAS_JSON_ARRAY), o || s || (o = n === i.Loader.TEXTURE_ATLAS_XML_STARLING ? t + ".xml" : t + ".json"), o) this.addToFileList("textureatlas", t, e, {
+                    if (void 0 !== e && null !== e || (e = t + ".webp"), void 0 === o && (o = null), void 0 === s && (s = null), void 0 === n && (n = i.Loader.TEXTURE_ATLAS_JSON_ARRAY), o || s || (o = n === i.Loader.TEXTURE_ATLAS_XML_STARLING ? t + ".xml" : t + ".json"), o) this.addToFileList("textureatlas", t, e, {
                         atlasURL: o,
                         format: n
                     });
@@ -20116,13 +20116,13 @@ function() {
 
     function d(t, e, i, o, s, n, r, a) {
         var h = window.AT.audio,
-            l = t.make.button(e, i, o, n, r, s + "_hover.png", s + "_normal.png", s + "_down.png", s + "_normal.png");
+            l = t.make.button(e, i, o, n, r, s + "_hover.webp", s + "_normal.webp", s + "_down.webp", s + "_normal.webp");
         return l.onInputDown.add(h.playButtonDown), l.onInputUp.add(h.playButtonUp), a && a.add ? a.add(l) : a && a.addChild && a.addChild(l), l
     }
 
     function c(t, e, i, o, s, n, r, a) {
         var h = window.AT.audio,
-            l = t.make.button(e, i, o, n, r, s + "/x_hover.png", s + "/x_normal.png", s + "/x_normal.png", s + "/x_hover.png");
+            l = t.make.button(e, i, o, n, r, s + "/x_hover.webp", s + "/x_normal.webp", s + "/x_normal.webp", s + "/x_hover.webp");
         return l.onInputDown.add(h.playButtonDown), l.onInputUp.add(h.playButtonUp), a && a.add ? a.add(l) : a && a.addChild && a.addChild(l), l
     }
 
@@ -20653,7 +20653,7 @@ function() {
     "use strict";
 
     function t(t, e, i) {
-        Phaser.Image.call(this, t.game, 0, 0, "game.png", "game/lifebar/background.png"), this.name = "lifebar", this._permanent = !1, this.owner = t, this.level = t.game.state.getCurrentState(), this.scale.set(.5, .5), this.anchor.set(.5, 0), this.pivot.set(e, i), this.alpha = 0, this.visible = !1, this.bar = t.game.make.image(-47.5, 0, "game.png", "game/lifebar/foreground.png"), this.bar.anchor.set(0, 0), this.bar.crop(new Phaser.Rectangle(0, 0, 95, 15)), this.addChild(this.bar), this.lastHealth = t.health, this.idleTime = 0, this.showTween = null, this.hideTween = null
+        Phaser.Image.call(this, t.game, 0, 0, "game.webp", "game/lifebar/background.webp"), this.name = "lifebar", this._permanent = !1, this.owner = t, this.level = t.game.state.getCurrentState(), this.scale.set(.5, .5), this.anchor.set(.5, 0), this.pivot.set(e, i), this.alpha = 0, this.visible = !1, this.bar = t.game.make.image(-47.5, 0, "game.webp", "game/lifebar/foreground.webp"), this.bar.anchor.set(0, 0), this.bar.crop(new Phaser.Rectangle(0, 0, 95, 15)), this.addChild(this.bar), this.lastHealth = t.health, this.idleTime = 0, this.showTween = null, this.hideTween = null
     }
     t.prototype = Object.create(Phaser.Image.prototype), t.prototype.show = function() {
         this.showTween || (this.hideTween && (this.hideTween.stop(), this.hideTween = null), this.idleTime = 0, this.visible = !0,
@@ -20681,9 +20681,9 @@ function() {
     "use strict";
 
     function t(t, i, o) {
-        Phaser.Sprite.call(this, t, i, o, "game.png"), this.animations.add("explode", e, 45)
+        Phaser.Sprite.call(this, t, i, o, "game.webp"), this.animations.add("explode", e, 45)
     }
-    var e = Phaser.Animation.generateFrameNames("game/particles/explosion_", 0, 14, ".png", 0);
+    var e = Phaser.Animation.generateFrameNames("game/particles/explosion_", 0, 14, ".webp", 0);
     t.prototype = Object.create(Phaser.Sprite.prototype), t.prototype.onEmit = function() {
         this.animations.stop("explode", !0), this.animations.play("explode"), this.anchor.set(.5, .55)
     }, window.AT.explosion = t
@@ -20692,14 +20692,14 @@ function() {
     "use strict";
 
     function t(t, i, o, s) {
-        Phaser.Sprite.call(this, t, i, o, "game.png"), this.team = s, this.animations.add("rocket", r, 30, !0), this.animations.play("rocket"), this.anchor.set(.5, .5), this.smokeTime = 0, this.speed = 0, s === e.PLAYER ? (this.acceleration = 18.36, this.maxSpeed = 204) : (this.acceleration = 15.12, this.maxSpeed = 168), this.requestKill = !1
+        Phaser.Sprite.call(this, t, i, o, "game.webp"), this.team = s, this.animations.add("rocket", r, 30, !0), this.animations.play("rocket"), this.anchor.set(.5, .5), this.smokeTime = 0, this.speed = 0, s === e.PLAYER ? (this.acceleration = 18.36, this.maxSpeed = 204) : (this.acceleration = 15.12, this.maxSpeed = 168), this.requestKill = !1
     }
     var e = window.AT.common.TEAMS,
         i = window.AT.common.COLLISION_GROUPS,
         o = window.AT.common.rotate,
         s = window.AT.common.rotateToPoint,
         n = window.AT.profile,
-        r = Phaser.Animation.generateFrameNames("game/projectiles/rocket_", 0, 2, ".png", 0);
+        r = Phaser.Animation.generateFrameNames("game/projectiles/rocket_", 0, 2, ".webp", 0);
     t.prototype = Object.create(Phaser.Sprite.prototype), t.collisionFilterCPU = function(t, e, o, s) {
         var n = e.GetFilterData().categoryBits;
         return n !== i.PROJECTILE && n !== i.ENEMY_SPAWNER && n !== i.ENEMY
@@ -20750,7 +20750,7 @@ function() {
     "use strict";
 
     function t(t, i, o) {
-        Phaser.Sprite.call(this, t, i, o, "game.png", "game/projectiles/laser.png"), this.anchor.set(0, .5), this.bulletBody = new Phaser.Physics.Box2D.Body(this.game, null, 0, 0, 2), this.bulletBody.setCircle(5), this.bulletBody.sensor = !0, this.bulletBody.setCollisionCategory(e.PROJECTILE), this.bulletBody.setCollisionMask(e.WALL | e.OBSTACLE)
+        Phaser.Sprite.call(this, t, i, o, "game.webp", "game/projectiles/laser.webp"), this.anchor.set(0, .5), this.bulletBody = new Phaser.Physics.Box2D.Body(this.game, null, 0, 0, 2), this.bulletBody.setCircle(5), this.bulletBody.sensor = !0, this.bulletBody.setCollisionCategory(e.PROJECTILE), this.bulletBody.setCollisionMask(e.WALL | e.OBSTACLE)
     }
     var e = window.AT.common.COLLISION_GROUPS;
     t.prototype = Object.create(Phaser.Sprite.prototype), window.AT.Laser = t
@@ -20759,7 +20759,7 @@ function() {
     "use strict";
 
     function t(t) {
-        Phaser.Sprite.call(this, t), this.team = 0, this.time = 0, this.hitColor = 16777215, this.circle = t.make.image(0, 0, "game.png", "game/particles/explosion_circle.png"), this.circle.anchor.set(.5, .5), this.addChild(this.circle), this.fire = t.make.sprite(0, 0, "game.png"), this.fire.animations.add("explode", s, 45), this.fire.anchor.set(.5, .55), this.addChild(this.fire), this._x = 0, this._y = 0, this._damage = 0, this._radius = 0, this.damaged = !1, this.circleStartScale = 0, this.circleEndScale = 0, this.circleBody = null, this.circleFixture = null
+        Phaser.Sprite.call(this, t), this.team = 0, this.time = 0, this.hitColor = 16777215, this.circle = t.make.image(0, 0, "game.webp", "game/particles/explosion_circle.webp"), this.circle.anchor.set(.5, .5), this.addChild(this.circle), this.fire = t.make.sprite(0, 0, "game.webp"), this.fire.animations.add("explode", s, 45), this.fire.anchor.set(.5, .55), this.addChild(this.fire), this._x = 0, this._y = 0, this._damage = 0, this._radius = 0, this.damaged = !1, this.circleStartScale = 0, this.circleEndScale = 0, this.circleBody = null, this.circleFixture = null
     }
 
     function e(t, e) {
@@ -20768,7 +20768,7 @@ function() {
     }
     var i = window.AT.audio,
         o = window.AT.common.COLLISION_GROUPS,
-        s = Phaser.Animation.generateFrameNames("game/particles/explosion_", 0, 14, ".png", 0);
+        s = Phaser.Animation.generateFrameNames("game/particles/explosion_", 0, 14, ".webp", 0);
     t.collisionFilter = function(t, e, i, s) {
         return e.GetFilterData().categoryBits !== o.PROJECTILE
     }, t.prototype = Object.create(Phaser.Sprite.prototype), t.prototype.startAnimation = function(t, e, i) {
@@ -20826,7 +20826,7 @@ function() {
     "use strict";
 
     function t(t, e, i, o) {
-        Phaser.Sprite.call(this, t, e, i, "game.png", o), this.player = t.state.getCurrentState().player, this.anchor.set(.5, .5), this.lifespan = 9833 + 833 * Math.random(), this.attracted = !1, this.velocity = new Phaser.Point(0, 0)
+        Phaser.Sprite.call(this, t, e, i, "game.webp", o), this.player = t.state.getCurrentState().player, this.anchor.set(.5, .5), this.lifespan = 9833 + 833 * Math.random(), this.attracted = !1, this.velocity = new Phaser.Point(0, 0)
     }
 
     function e(i, o, s) {
@@ -20876,13 +20876,13 @@ function() {
         }
         var o = this.game.time.physicsElapsed;
         this.position.x += this.velocity.x * o, this.position.y += this.velocity.y * o
-    }, e.FRAME_NAME = "game/bonuses/health.png", e.prototype = Object.create(t.prototype), e.prototype.constructor = e, i.FRAME_NAME = "game/bonuses/freeze.png", i.prototype = Object.create(t.prototype), i.prototype.constructor = i, i.prototype.onPlayerHit = function() {
+    }, e.FRAME_NAME = "game/bonuses/health.webp", e.prototype = Object.create(t.prototype), e.prototype.constructor = e, i.FRAME_NAME = "game/bonuses/freeze.webp", i.prototype = Object.create(t.prototype), i.prototype.constructor = i, i.prototype.onPlayerHit = function() {
         t.prototype.onPlayerHit.call(this);
         var e = this.game.state.getCurrentState();
         e.spawnIce(this.position.x, this.position.y), e.shakeCamera(6), e.freezeEnemies()
-    }, o.FRAME_NAME = "game/bonuses/coin.png", o.prototype = Object.create(t.prototype), o.prototype.constructor = o, o.prototype.update = function() {
+    }, o.FRAME_NAME = "game/bonuses/coin.webp", o.prototype = Object.create(t.prototype), o.prototype.constructor = o, o.prototype.update = function() {
         t.prototype.update.call(this), this.velocity.x *= .75, this.velocity.y *= .75
-    }, s.FRAME_NAME = "game/bonuses/ammo_shotgun.png", s.prototype = Object.create(t.prototype), s.prototype.constructor = s, n.FRAME_NAME = "game/bonuses/ammo_ricochet.png", n.prototype = Object.create(t.prototype), n.prototype.constructor = n, r.FRAME_NAME = "game/bonuses/ammo_cannon.png", r.prototype = Object.create(t.prototype), r.prototype.constructor = r, a.FRAME_NAME = "game/bonuses/ammo_rockets.png", a.prototype = Object.create(t.prototype), a.prototype.constructor = a, h.FRAME_NAME = "game/bonuses/ammo_laser.png", h.prototype = Object.create(t.prototype), h.prototype.constructor = h, window.AT.bonus = {
+    }, s.FRAME_NAME = "game/bonuses/ammo_shotgun.webp", s.prototype = Object.create(t.prototype), s.prototype.constructor = s, n.FRAME_NAME = "game/bonuses/ammo_ricochet.webp", n.prototype = Object.create(t.prototype), n.prototype.constructor = n, r.FRAME_NAME = "game/bonuses/ammo_cannon.webp", r.prototype = Object.create(t.prototype), r.prototype.constructor = r, a.FRAME_NAME = "game/bonuses/ammo_rockets.webp", a.prototype = Object.create(t.prototype), a.prototype.constructor = a, h.FRAME_NAME = "game/bonuses/ammo_laser.webp", h.prototype = Object.create(t.prototype), h.prototype.constructor = h, window.AT.bonus = {
         Bonus: t,
         Health: e,
         Freeze: i,
@@ -20898,7 +20898,7 @@ function() {
     "use strict";
 
     function t(t, i, s, n) {
-        Phaser.Sprite.call(this, t, i, s, "game.png", n), this.level = t.state.getCurrentState(), this.tileX = this.level.pxToTile(i), this.tileY = this.level.pxToTile(s), this.name = "obstacle", this.anchor.set(.5, .5), t.physics.box2d.enableBody(this), this.body.static = !0, this.body.setCollisionCategory(e.OBSTACLE), this.body.setCollisionMask(e.PLAYER | e.PROJECTILE | e.ENEMY), this.hit = 0, this.hitColor = 0, this.killDelay = 2 / 60, this.lifebar = new o(this, 0, 60)
+        Phaser.Sprite.call(this, t, i, s, "game.webp", n), this.level = t.state.getCurrentState(), this.tileX = this.level.pxToTile(i), this.tileY = this.level.pxToTile(s), this.name = "obstacle", this.anchor.set(.5, .5), t.physics.box2d.enableBody(this), this.body.static = !0, this.body.setCollisionCategory(e.OBSTACLE), this.body.setCollisionMask(e.PLAYER | e.PROJECTILE | e.ENEMY), this.hit = 0, this.hitColor = 0, this.killDelay = 2 / 60, this.lifebar = new o(this, 0, 60)
     }
     var e = window.AT.common.COLLISION_GROUPS,
         i = window.AT.common.calculateHitColor,
@@ -20919,7 +20919,7 @@ function() {
     "use strict";
 
     function t(t, e, i, s) {
-        o.call(this, t, e, i, s ? "game/bricks_1.png" : "game/bricks_0.png"), this.name = "bricks";
+        o.call(this, t, e, i, s ? "game/bricks_1.webp" : "game/bricks_0.webp"), this.name = "bricks";
         var n = t.state.getCurrentState();
         this.setHealth(s ? 75 + 30 * n.number : 25 + 10 * n.number)
     }
@@ -20935,7 +20935,7 @@ function() {
     "use strict";
 
     function t(t, e, i) {
-        o.call(this, t, e, i, "game/gate.png"), this.name = "gate";
+        o.call(this, t, e, i, "game/gate.webp"), this.name = "gate";
         var s = t.state.getCurrentState();
         this.setHealth(25 + 10 * s.number), this.gateLeft = null, this.gateRight = null, this.gateUp = null, this.gateDown = null
     }
@@ -20959,7 +20959,7 @@ function() {
     "use strict";
 
     function t(t, e, o) {
-        i.call(this, t, e, o, "game/barrel.png"), this.name = "barrel", this.body.setCircle(18), this.body.rotation = Math.PI * Math.random() * 2, this.body.setCollisionCategory(16), this.setHealth(25), this.killDelay = 8 / 60
+        i.call(this, t, e, o, "game/barrel.webp"), this.name = "barrel", this.body.setCircle(18), this.body.rotation = Math.PI * Math.random() * 2, this.body.setCollisionCategory(16), this.setHealth(25), this.killDelay = 8 / 60
     }
     var e = window.AT.profile,
         i = window.AT.Obstacle,
@@ -20981,7 +20981,7 @@ function() {
     }
 
     function e(t, e, o, s) {
-        n.call(this, t, e, o, "game/crate.png"), this.name = "crate", this.body.setCollisionCategory(i.ENEMY), this.setHealth(20)
+        n.call(this, t, e, o, "game/crate.webp"), this.name = "crate", this.body.setCollisionCategory(i.ENEMY), this.setHealth(20)
     }
     var i = window.AT.common.COLLISION_GROUPS,
         o = window.AT.profile,
@@ -21123,19 +21123,19 @@ function() {
     }
 
     function e(e, i) {
-        t.call(this, e, i), this.velocity = 690, this.frameName = "game/projectiles/minigun.png"
+        t.call(this, e, i), this.velocity = 690, this.frameName = "game/projectiles/minigun.webp"
     }
 
     function i(e, i) {
-        t.call(this, e, i), this.spread = Math.PI / 5, this.velocity = 0, this.frameName = "game/projectiles/shotgun.png"
+        t.call(this, e, i), this.spread = Math.PI / 5, this.velocity = 0, this.frameName = "game/projectiles/shotgun.webp"
     }
 
     function o(e, i) {
-        t.call(this, e, i), this.spawnDistance = 20, this.spawnCount = 1, this.spread = 0, this.velocity = 480, this.frameName = "game/projectiles/plasma.png", this.rate = 0, this.life = 80 / 60, this.charge = 0
+        t.call(this, e, i), this.spawnDistance = 20, this.spawnCount = 1, this.spread = 0, this.velocity = 480, this.frameName = "game/projectiles/plasma.webp", this.rate = 0, this.life = 80 / 60, this.charge = 0
     }
 
     function s(e, i) {
-        t.call(this, e, i), this.spawnCount = 1, this.spread = 0, this.velocity = 900, this.frameName = "game/projectiles/cannon.png"
+        t.call(this, e, i), this.spawnCount = 1, this.spread = 0, this.velocity = 900, this.frameName = "game/projectiles/cannon.webp"
     }
 
     function n(e, i) {
@@ -21151,7 +21151,7 @@ function() {
         d = window.AT.profile,
         c = window.AT.audio,
         p = window.AT.Rocket,
-        u = ["game/particles/spark_0.png", "game/particles/spark_1.png"];
+        u = ["game/particles/spark_0.webp", "game/particles/spark_1.webp"];
     t.prototype = Object.create(Phaser.Group.prototype), t.prototype.destroy = function() {
         this.stopFire(), Phaser.Group.prototype.destroy.call(this)
     }, t.prototype.activate = function() {}, t.prototype.deactivate = function() {
@@ -21174,13 +21174,13 @@ function() {
     }, t.prototype.onBulletHitWall = function(t, e, i, o, s, n) {
         if (s && t.sprite.alive) {
             var r = this.game.state.getCurrentState();
-            r.starEmitter.emitParticle(t.x, t.y, "game.png", "game/particles/star_object.png"), this.soundAlertRadius && r.alertSound(t.x, t.y, this.soundAlertRadius), t.sprite.kill(),
+            r.starEmitter.emitParticle(t.x, t.y, "game.webp", "game/particles/star_object.webp"), this.soundAlertRadius && r.alertSound(t.x, t.y, this.soundAlertRadius), t.sprite.kill(),
                 t.setZeroVelocity()
         }
     }, t.prototype.onBulletHitObject = function(t, e, i, o, s, n) {
         e !== this.tank.body && (t.sprite.alive && e.sprite && e.sprite.onBulletHit && e.sprite.onBulletHit(this.damage, this, t, s), this.onBulletHitWall(t, e, i, o, s, n))
     }, t.prototype.newBullet = function() {
-        return new this.bulletClass(this.game, 0, 0, "game.png", this.frameName)
+        return new this.bulletClass(this.game, 0, 0, "game.webp", this.frameName)
     }, t.prototype.createBullet = function() {
         var t = this.newBullet();
         t.events.onKilled.add(this.onBulletKilled, this), this.game.physics.box2d.enableBody(t), t.body.setCircle(5), t.body.sensor = !0, t.body.friction = 0, t.body.setCollisionCategory(a.PROJECTILE), t.body.setCategoryContactCallback(a.WALL, this.onBulletHitWall, this), t.body.setCategoryContactCallback(a.OBSTACLE, this.onBulletHitObject, this);
@@ -21228,7 +21228,7 @@ function() {
             var n = t.data.GetUserData();
             n.hits > 0 ? (n.hits -= 1, c.playSound("ricochet_bounce.mp3")) : t.sprite.kill();
             var r = this.game.state.getCurrentState();
-            r.starEmitter.emitParticle(t.x, t.y, "game.png", "game/particles/star_object.png"), this.soundAlertRadius && r.alertSound(t.x, t.y, this.soundAlertRadius)
+            r.starEmitter.emitParticle(t.x, t.y, "game.webp", "game/particles/star_object.webp"), this.soundAlertRadius && r.alertSound(t.x, t.y, this.soundAlertRadius)
         }
     }, o.prototype.onBulletHitObject = function(t, e, i, o, s, n) {
         if (s) {
@@ -21323,7 +21323,7 @@ function() {
             if (n) {
                 var r = this.game.state.getCurrentState(),
                     a = r.sparkEmitter;
-                a.setXSpeed(-100, 100), a.setYSpeed(-100, 100), a.emitParticle(n[0].point.x, n[0].point.y, "game.png", r.rnd.pick(u));
+                a.setXSpeed(-100, 100), a.setYSpeed(-100, 100), a.emitParticle(n[0].point.x, n[0].point.y, "game.webp", r.rnd.pick(u));
                 var h = n[0].point.x,
                     l = n[0].point.y;
                 e.width = Phaser.Math.distance(this.tank.body.x + o * this.spawnDistance, this.tank.body.y + s * this.spawnDistance, h, l), e.bulletBody.reset(h, l), e.bulletBody.data.SetAwake(!0);
@@ -21345,11 +21345,11 @@ function() {
     "use strict";
 
     function t(e, i, o, s, n) {
-        Phaser.Sprite.call(this, e, i, o, "game.png", s), this.level = e.state.getCurrentState(), this.tileX = this.level.pxToTile(i), this.tileY = this.level.pxToTile(o), this.name = "turret", this.searchForPlayer = c(t.prototype.searchForPlayer, 2), this.anchor.set(.5, .5), this.turret = new Phaser.Image(e, 0, 0, "game.png", n), this.turret.anchor.set(.5, .5), this.addChild(this.turret), e.physics.box2d.enableBody(this), this.body.static = !0, this.body.setCollisionCategory(h.ENEMY), this.bodyX = this.body.x, this.bodyY = this.body.y, this.ice = e.make.image(0, 0, "game.png", "game/ice.png"), this.ice.alpha = .85, this.ice.angle = 360 * Math.random(), this.ice.anchor.set(.5, .5), this.clockwise = Math.random() < .5, this.patrolWaitTime = 0, this.patrolTargetRotation = 0, this.skipFrames = 0, this._alerted = 0, this.hit = 0, this.hitColor = 0, this.killDelay = 2 / 60, this.sightRange = 1 / 0, this.lifebar = new b(this, 0, 60), this.weapon = null, this.shootAngle = 0, this._turretPosition = new Phaser.Point
+        Phaser.Sprite.call(this, e, i, o, "game.webp", s), this.level = e.state.getCurrentState(), this.tileX = this.level.pxToTile(i), this.tileY = this.level.pxToTile(o), this.name = "turret", this.searchForPlayer = c(t.prototype.searchForPlayer, 2), this.anchor.set(.5, .5), this.turret = new Phaser.Image(e, 0, 0, "game.webp", n), this.turret.anchor.set(.5, .5), this.addChild(this.turret), e.physics.box2d.enableBody(this), this.body.static = !0, this.body.setCollisionCategory(h.ENEMY), this.bodyX = this.body.x, this.bodyY = this.body.y, this.ice = e.make.image(0, 0, "game.webp", "game/ice.webp"), this.ice.alpha = .85, this.ice.angle = 360 * Math.random(), this.ice.anchor.set(.5, .5), this.clockwise = Math.random() < .5, this.patrolWaitTime = 0, this.patrolTargetRotation = 0, this.skipFrames = 0, this._alerted = 0, this.hit = 0, this.hitColor = 0, this.killDelay = 2 / 60, this.sightRange = 1 / 0, this.lifebar = new b(this, 0, 60), this.weapon = null, this.shootAngle = 0, this._turretPosition = new Phaser.Point
     }
 
     function e(e, i, o) {
-        t.call(this, e, i, o, "game/turrets/minigun_base.png", "game/turrets/minigun.png"), this.turret.anchor.set(14 / 44, .5), this.setHealth(125), this.sightRange = 400, this.shootAngle = 10, this.weapon = new m(this, {
+        t.call(this, e, i, o, "game/turrets/minigun_base.webp", "game/turrets/minigun.webp"), this.turret.anchor.set(14 / 44, .5), this.setHealth(125), this.sightRange = 400, this.shootAngle = 10, this.weapon = new m(this, {
             id: "turrets/minigun",
             team: l.CPU,
             spawnDistance: 22,
@@ -21360,7 +21360,7 @@ function() {
     }
 
     function i(e, i, o) {
-        t.call(this, e, i, o, "game/turrets/shotgun_base.png", "game/turrets/shotgun.png"), this.turret.anchor.set(14 / 41, .5), this.setHealth(250), this.sightRange = 400, this.shootAngle = 20, this.weapon = new y(this, {
+        t.call(this, e, i, o, "game/turrets/shotgun_base.webp", "game/turrets/shotgun.webp"), this.turret.anchor.set(14 / 41, .5), this.setHealth(250), this.sightRange = 400, this.shootAngle = 20, this.weapon = new y(this, {
             id: "turrets/shotgun",
             team: l.CPU,
             spawnCount: 6,
@@ -21372,7 +21372,7 @@ function() {
     }
 
     function o(e, i, o) {
-        t.call(this, e, i, o, "game/turrets/cannon_base.png", "game/turrets/cannon.png"), this.turret.anchor.set(25 / 63, .5), this.setHealth(500), this.sightRange = 400, this.shootAngle = 20, this.weapon = new x(this, {
+        t.call(this, e, i, o, "game/turrets/cannon_base.webp", "game/turrets/cannon.webp"), this.turret.anchor.set(25 / 63, .5), this.setHealth(500), this.sightRange = 400, this.shootAngle = 20, this.weapon = new x(this, {
             id: "turrets/cannon",
             team: l.CPU,
             damage: 100,
@@ -21383,7 +21383,7 @@ function() {
     }
 
     function s(e, i, o) {
-        t.call(this, e, i, o, "game/turrets/rockets_base.png", "game/turrets/rockets.png"), this.turret.anchor.set(19 / 54, .5), this.setHealth(1e3), this.sightRange = 400, this.shootAngle = 25, this.follow = null, this.weapon = new f(this, {
+        t.call(this, e, i, o, "game/turrets/rockets_base.webp", "game/turrets/rockets.webp"), this.turret.anchor.set(19 / 54, .5), this.setHealth(1e3), this.sightRange = 400, this.shootAngle = 25, this.follow = null, this.weapon = new f(this, {
             id: "player/rockets",
             team: l.CPU,
             damage: 180,
@@ -21395,7 +21395,7 @@ function() {
     }
 
     function n(e, i, o) {
-        t.call(this, e, i, o, "game/turrets/laser_base.png", "game/turrets/laser.png"), this.turret.anchor.set(31 / 57, .5), this.setHealth(2e3), this.sightRange = 300, this.shootAngle = 15, this.weapon = new g(this, {
+        t.call(this, e, i, o, "game/turrets/laser_base.webp", "game/turrets/laser.webp"), this.turret.anchor.set(31 / 57, .5), this.setHealth(2e3), this.sightRange = 300, this.shootAngle = 15, this.weapon = new g(this, {
             id: "turrets/laser",
             team: l.CPU,
             damage: 6,
@@ -21497,11 +21497,11 @@ function() {
     "use strict";
 
     function t(t, e, i, o, s) {
-        Phaser.Sprite.call(this, t, e, i, "game.png", o[0]), this.name = "tank", this.level = t.state.getCurrentState(), this.searchForPlayer = y(this.searchForPlayer, 11), this.lineOfFireClear = y(this.lineOfFireClear, 5), this.spawner = null, this.hit = 0, this.hitColor = 0, this.killDelay = 2 / 60, this._alerted = 0, this.acceleration = 0, this.speedMax = 200, this.turretSpeed = 3, this.sightRange = 0, this.sightAngle = 120, this.distanceToPlayer = 1 / 0, this.rotationToPlayer = 0, this.anchor.set(.5, .5), this.animations.add("move", o, 20, !0), this.turret = t.make.image(0, 0, "game.png", s), this.turret.anchor.set(.5, .5), this.addChild(this.turret), this._turretPosition = new Phaser.Point, this.ice = t.make.image(0, 0, "game.png", "game/ice.png"), this.ice.alpha = .85, this.ice.angle = 360 * Math.random(), this.ice.anchor.set(.5, .5), t.physics.box2d.enableBody(this), this.body.setCircle(22), this.body.friction = 0, this.body.restitution = 0, this.body.linearDamping = 10, this.body.angularDamping = 10, this.body.mass *= 200, this.body.fixedRotation = !0, this.body.angle = 90 * Math.floor(4 * Math.random()), this.body.setCollisionCategory(u.ENEMY), this.body.setCollisionMask(u.PLAYER | u.PROJECTILE | u.ENEMY | u.OBSTACLE | u.WALL), this.bodyX = this.body.x, this.bodyY = this.body.y, this.previousTileX = this.tileX = this.level.pxToTile(this.bodyX), this.previousTileY = this.tileY = this.level.pxToTile(this.bodyY), this.level.occupyTile(this.tileX, this.tileY), this.weapon = null, this.lifebar = new _(this, 0, 60), this.states = new g(this)
+        Phaser.Sprite.call(this, t, e, i, "game.webp", o[0]), this.name = "tank", this.level = t.state.getCurrentState(), this.searchForPlayer = y(this.searchForPlayer, 11), this.lineOfFireClear = y(this.lineOfFireClear, 5), this.spawner = null, this.hit = 0, this.hitColor = 0, this.killDelay = 2 / 60, this._alerted = 0, this.acceleration = 0, this.speedMax = 200, this.turretSpeed = 3, this.sightRange = 0, this.sightAngle = 120, this.distanceToPlayer = 1 / 0, this.rotationToPlayer = 0, this.anchor.set(.5, .5), this.animations.add("move", o, 20, !0), this.turret = t.make.image(0, 0, "game.webp", s), this.turret.anchor.set(.5, .5), this.addChild(this.turret), this._turretPosition = new Phaser.Point, this.ice = t.make.image(0, 0, "game.webp", "game/ice.webp"), this.ice.alpha = .85, this.ice.angle = 360 * Math.random(), this.ice.anchor.set(.5, .5), t.physics.box2d.enableBody(this), this.body.setCircle(22), this.body.friction = 0, this.body.restitution = 0, this.body.linearDamping = 10, this.body.angularDamping = 10, this.body.mass *= 200, this.body.fixedRotation = !0, this.body.angle = 90 * Math.floor(4 * Math.random()), this.body.setCollisionCategory(u.ENEMY), this.body.setCollisionMask(u.PLAYER | u.PROJECTILE | u.ENEMY | u.OBSTACLE | u.WALL), this.bodyX = this.body.x, this.bodyY = this.body.y, this.previousTileX = this.tileX = this.level.pxToTile(this.bodyX), this.previousTileY = this.tileY = this.level.pxToTile(this.bodyY), this.level.occupyTile(this.tileX, this.tileY), this.weapon = null, this.lifebar = new _(this, 0, 60), this.states = new g(this)
     }
 
     function e(e, i, o) {
-        t.call(this, e, i, o, P, "game/tanks/minigun.png"), this.turret.position.x = 1, this.turret.anchor.set(10 / 35, .5), this.setHealth(40 * this.level.difficulty), this.acceleration = .13 + .01 * this.level.index, this.speedMax = 30 * (2.1 + .2 * this.level.index), this.turretSpeed = 2.2 + .2 * this.level.index, this.sightRange = (170 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 10, this.weapon = new v(this, {
+        t.call(this, e, i, o, P, "game/tanks/minigun.webp"), this.turret.position.x = 1, this.turret.anchor.set(10 / 35, .5), this.setHealth(40 * this.level.difficulty), this.acceleration = .13 + .01 * this.level.index, this.speedMax = 30 * (2.1 + .2 * this.level.index), this.turretSpeed = 2.2 + .2 * this.level.index, this.sightRange = (170 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 10, this.weapon = new v(this, {
             id: "tanks/minigun",
             team: b.CPU,
             spawnDistance: 14,
@@ -21512,7 +21512,7 @@ function() {
     }
 
     function i(e, i, o) {
-        t.call(this, e, i, o, B, "game/tanks/shotgun.png"), this.turret.position.x = 1, this.turret.anchor.set(11 / 33, .5), this.setHealth(80 * this.level.difficulty), this.acceleration = .13 + .01 * this.level.index, this.speedMax = 30 * (2.1 + .2 * this.level.index), this.turretSpeed = 2.2 + .2 * this.level.index, this.sightRange = (200 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 15, this.weapon = new w(this, {
+        t.call(this, e, i, o, B, "game/tanks/shotgun.webp"), this.turret.position.x = 1, this.turret.anchor.set(11 / 33, .5), this.setHealth(80 * this.level.difficulty), this.acceleration = .13 + .01 * this.level.index, this.speedMax = 30 * (2.1 + .2 * this.level.index), this.turretSpeed = 2.2 + .2 * this.level.index, this.sightRange = (200 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 15, this.weapon = new w(this, {
             id: "tanks/shotgun",
             team: b.CPU,
             spawnCount: 6,
@@ -21524,7 +21524,7 @@ function() {
     }
 
     function o(e, i, o) {
-        t.call(this, e, i, o, M, "game/tanks/cannon.png"), this.turret.anchor.set(.4, .5), this.setHealth(120 * this.level.difficulty), this.acceleration = .13 + .01 * this.level.index, this.speedMax = 30 * (2.1 + .2 * this.level.index), this.turretSpeed = 2.2 + .2 * this.level.index, this.sightRange = (200 + 11 * this.level.index) * this.level.difficulty, this.shootAngle = 20, this.weapon = new C(this, {
+        t.call(this, e, i, o, M, "game/tanks/cannon.webp"), this.turret.anchor.set(.4, .5), this.setHealth(120 * this.level.difficulty), this.acceleration = .13 + .01 * this.level.index, this.speedMax = 30 * (2.1 + .2 * this.level.index), this.turretSpeed = 2.2 + .2 * this.level.index, this.sightRange = (200 + 11 * this.level.index) * this.level.difficulty, this.shootAngle = 20, this.weapon = new C(this, {
             id: "tanks/cannon",
             team: b.CPU,
             damage: 100,
@@ -21535,7 +21535,7 @@ function() {
     }
 
     function s(e, i, o) {
-        t.call(this, e, i, o, I, "game/tanks/rockets.png"), this.turret.anchor.set(15 / 43, .5), this.setHealth(160 * this.level.difficulty), this.acceleration = .13 + .01 * this.level.index, this.speedMax = 90, this.turretSpeed = 2.2 + .2 * this.level.index, this.sightRange = (230 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 40, this.follow = null, this.weapon = new S(this, {
+        t.call(this, e, i, o, I, "game/tanks/rockets.webp"), this.turret.anchor.set(15 / 43, .5), this.setHealth(160 * this.level.difficulty), this.acceleration = .13 + .01 * this.level.index, this.speedMax = 90, this.turretSpeed = 2.2 + .2 * this.level.index, this.sightRange = (230 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 40, this.follow = null, this.weapon = new S(this, {
             id: "tanks/rockets",
             team: b.CPU,
             damage: 180,
@@ -21547,7 +21547,7 @@ function() {
     }
 
     function n(e, i, o) {
-        t.call(this, e, i, o, R, "game/tanks/laser.png"), this.turret.anchor.set(.5, .5), this.setHealth(200 * this.level.difficulty), this.acceleration = .13 + .01 * this.level.index, this.speedMax = 30 * (2.1 + .2 * this.level.index), this.turretSpeed = 2.2 + .2 * this.level.index, this.sightRange = (230 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 10, this.weapon = new A(this, {
+        t.call(this, e, i, o, R, "game/tanks/laser.webp"), this.turret.anchor.set(.5, .5), this.setHealth(200 * this.level.difficulty), this.acceleration = .13 + .01 * this.level.index, this.speedMax = 30 * (2.1 + .2 * this.level.index), this.turretSpeed = 2.2 + .2 * this.level.index, this.sightRange = (230 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 10, this.weapon = new A(this, {
             id: "tanks/laser",
             team: b.CPU,
             damage: 6,
@@ -21560,7 +21560,7 @@ function() {
     }
 
     function a(t, e, i) {
-        r.call(this, t, e, i, "game/tanks/shotgun_boss.png"), this.turret.position.x = 1, this.turret.anchor.set(15 / 41, .5), this.setHealth(800 * this.level.difficulty), this.sightRange = 1.3 * (200 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 18, this.weapon = new w(this, {
+        r.call(this, t, e, i, "game/tanks/shotgun_boss.webp"), this.turret.position.x = 1, this.turret.anchor.set(15 / 41, .5), this.setHealth(800 * this.level.difficulty), this.sightRange = 1.3 * (200 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 18, this.weapon = new w(this, {
             id: "tanks/shotgun",
             team: b.CPU,
             spawnCount: 6,
@@ -21572,7 +21572,7 @@ function() {
     }
 
     function h(t, e, i) {
-        r.call(this, t, e, i, "game/tanks/cannon_boss.png"), this.turret.anchor.set(25 / 63, .5), this.setHealth(1600 * this.level.difficulty), this.sightRange = 1.3 * (200 + 11 * this.level.index), this.shootAngle = 24, this.weapon = new C(this, {
+        r.call(this, t, e, i, "game/tanks/cannon_boss.webp"), this.turret.anchor.set(25 / 63, .5), this.setHealth(1600 * this.level.difficulty), this.sightRange = 1.3 * (200 + 11 * this.level.index), this.shootAngle = 24, this.weapon = new C(this, {
             id: "tanks/cannon",
             team: b.CPU,
             damage: 100,
@@ -21583,7 +21583,7 @@ function() {
     }
 
     function l(t, e, i) {
-        r.call(this, t, e, i, "game/tanks/rockets_boss.png"), this.turret.anchor.set(.4, .5), this.setHealth(3200 * this.level.difficulty), this.sightRange = 1.3 * (230 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 48, this.follow = null, this.weapon = new S(this, {
+        r.call(this, t, e, i, "game/tanks/rockets_boss.webp"), this.turret.anchor.set(.4, .5), this.setHealth(3200 * this.level.difficulty), this.sightRange = 1.3 * (230 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 48, this.follow = null, this.weapon = new S(this, {
             id: "tanks/rockets",
             team: b.CPU,
             damage: 180,
@@ -21595,7 +21595,7 @@ function() {
     }
 
     function d(t, e, i) {
-        r.call(this, t, e, i, "game/tanks/laser_boss.png"), this.turret.anchor.set(.5, .5), this.setHealth(5e3 * this.level.difficulty), this.sightRange = 1.3 * (230 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 12, this.weapon = new A(this, {
+        r.call(this, t, e, i, "game/tanks/laser_boss.webp"), this.turret.anchor.set(.5, .5), this.setHealth(5e3 * this.level.difficulty), this.sightRange = 1.3 * (230 + 8 * this.level.index) * this.level.difficulty, this.shootAngle = 12, this.weapon = new A(this, {
             id: "tanks/laser",
             team: b.CPU,
             damage: 6,
@@ -21618,12 +21618,12 @@ function() {
         S = window.AT.weapon.RocketLauncher,
         A = window.AT.weapon.Laser,
         T = window.AT.explosions.Explosion,
-        P = ["game/tanks/minigun_body_0.png", "game/tanks/minigun_body_1.png"],
-        B = ["game/tanks/shotgun_body_0.png", "game/tanks/shotgun_body_1.png"],
-        M = ["game/tanks/cannon_body_0.png", "game/tanks/cannon_body_1.png"],
-        I = ["game/tanks/rockets_body_0.png", "game/tanks/rockets_body_1.png"],
-        R = ["game/tanks/laser_body_0.png", "game/tanks/laser_body_1.png"],
-        V = ["game/tanks/boss_body_0.png", "game/tanks/boss_body_1.png"];
+        P = ["game/tanks/minigun_body_0.webp", "game/tanks/minigun_body_1.webp"],
+        B = ["game/tanks/shotgun_body_0.webp", "game/tanks/shotgun_body_1.webp"],
+        M = ["game/tanks/cannon_body_0.webp", "game/tanks/cannon_body_1.webp"],
+        I = ["game/tanks/rockets_body_0.webp", "game/tanks/rockets_body_1.webp"],
+        R = ["game/tanks/laser_body_0.webp", "game/tanks/laser_body_1.webp"],
+        V = ["game/tanks/boss_body_0.webp", "game/tanks/boss_body_1.webp"];
     t.visibilityFilter = function(t, e, i, o) {
         var s = e.GetFilterData().categoryBits;
         return s !== u.PROJECTILE && s !== u.ENEMY_SPAWNER && s !== u.ENEMY
@@ -21728,7 +21728,7 @@ function() {
 
     function t(t, i, o, d) {
         var c = t.state.getCurrentState();
-        s.call(this, t, i, o, "game/spawner_" + d + ".png"), this.name = "spawner", this.ice = t.make.image(0, 0, "game.png", "game/ice.png"), this.ice.alpha = .85, this.ice.angle = 360 * Math.random(), this.ice.anchor.set(.5, .5), this.body.setCollisionCategory(e.ENEMY_SPAWNER), this.body.setCollisionMask(e.PLAYER | e.PROJECTILE), this.spawnerType = d, this.halfDestructed = !1, this.tileX = c.pxToTile(this.body.x), this.tileY = c.pxToTile(this.body.y), 0 === d ? (this.setHealth((c.number > 2 ? 150 : 75) * c.difficulty), this.spawnTypes = [n, r]) : 1 === d ? (this.setHealth(250 * c.difficulty), this.spawnTypes = [r, a]) : 2 === d ? (this.setHealth(400 * c.difficulty), this.spawnTypes = [a, h]) : 3 === d && (this.setHealth(600 * c.difficulty), this.spawnTypes = [h, l]), this.spawnDelay = 1 + Math.random(), this.spawned = 0, this.spawnedAdvanced = 0, this.tanks = []
+        s.call(this, t, i, o, "game/spawner_" + d + ".webp"), this.name = "spawner", this.ice = t.make.image(0, 0, "game.webp", "game/ice.webp"), this.ice.alpha = .85, this.ice.angle = 360 * Math.random(), this.ice.anchor.set(.5, .5), this.body.setCollisionCategory(e.ENEMY_SPAWNER), this.body.setCollisionMask(e.PLAYER | e.PROJECTILE), this.spawnerType = d, this.halfDestructed = !1, this.tileX = c.pxToTile(this.body.x), this.tileY = c.pxToTile(this.body.y), 0 === d ? (this.setHealth((c.number > 2 ? 150 : 75) * c.difficulty), this.spawnTypes = [n, r]) : 1 === d ? (this.setHealth(250 * c.difficulty), this.spawnTypes = [r, a]) : 2 === d ? (this.setHealth(400 * c.difficulty), this.spawnTypes = [a, h]) : 3 === d && (this.setHealth(600 * c.difficulty), this.spawnTypes = [h, l]), this.spawnDelay = 1 + Math.random(), this.spawned = 0, this.spawnedAdvanced = 0, this.tanks = []
     }
     var e = window.AT.common.COLLISION_GROUPS,
         i = window.AT.profile,
@@ -21749,7 +21749,7 @@ function() {
         }
     }, t.prototype.onBulletHit = function(t, e, i, n) {
         if (n && !(e instanceof c || e instanceof p) && o.playSpawnerHit(), s.prototype.onBulletHit.call(this, t, e, i, n), !this.halfDestructed && this.health > 0 && this.health < this.maxHealth / 2) {
-            this.frameName = "game/spawner_" + this.spawnerType + "_damaged.png";
+            this.frameName = "game/spawner_" + this.spawnerType + "_damaged.webp";
             var r = this.game.state.getCurrentState();
             r.spawnSmoke(this.body.x, this.body.y, 10), r.shakeCamera(6), this.halfDestructed = !0, o.playSound("explosion.mp3", 1.25)
         }
@@ -21783,7 +21783,7 @@ function() {
 
     function t(o, s, n) {
         var r = d.current.game;
-        Phaser.Sprite.call(this, o.game, s, n), this.name = "player", this.findAutoAimTarget = h(this.findAutoAimTarget, 3), this.hit = 0, this.hitColor = 0, this.killDelay = .12, this.level = o, this.bodySprite = new Phaser.Sprite(o.game, 0, 0, "game.png", "game/player/body_0.png"), this.bodySprite.anchor.set(.5, .5), this.bodySprite.animations.add("move", ["game/player/body_0.png", "game/player/body_1.png"], 20, !0), this.addChild(this.bodySprite), this.turretSprite = new Phaser.Sprite(o.game, 0, 0, "game.png"), this.turretSprite.anchor.set(24 / 54, .5), this.addChild(this.turretSprite), this._turretPosition = new Phaser.Point, o.physics.box2d.enableBody(this), this.body.setCircle(22), this.body.friction = 0, this.body.restitution = 0, this.body.setCollisionCategory(i.PLAYER), this.bodyX = this.body.x, this.bodyY = this.body.y, this.previousTileX = this.tileX = o.pxToTile(this.bodyX), this.previousTileY = this.tileY = o.pxToTile(this.bodyY), this.invincible = !1, this.health = this.maxHealth = t.ARMOR_LEVELS[r.armor], this.moveSpeed = t.SPEED_LEVELS[r.speed], this.turretSpeed = t.TURRET_LEVELS[r.turret], this.viewAngle = t.VIEW_ANGLE_LEVELS[r.sight], this.viewDistance = t.VIEW_DISTANCE_LEVELS[r.sight], this.follow = null, this.autoAim = !1, this.autoAimTarget = null, this.autoAimDisableDelay = 0, o.objectsLayer.add(this), this.weapons = [new p(this, {
+        Phaser.Sprite.call(this, o.game, s, n), this.name = "player", this.findAutoAimTarget = h(this.findAutoAimTarget, 3), this.hit = 0, this.hitColor = 0, this.killDelay = .12, this.level = o, this.bodySprite = new Phaser.Sprite(o.game, 0, 0, "game.webp", "game/player/body_0.webp"), this.bodySprite.anchor.set(.5, .5), this.bodySprite.animations.add("move", ["game/player/body_0.webp", "game/player/body_1.webp"], 20, !0), this.addChild(this.bodySprite), this.turretSprite = new Phaser.Sprite(o.game, 0, 0, "game.webp"), this.turretSprite.anchor.set(24 / 54, .5), this.addChild(this.turretSprite), this._turretPosition = new Phaser.Point, o.physics.box2d.enableBody(this), this.body.setCircle(22), this.body.friction = 0, this.body.restitution = 0, this.body.setCollisionCategory(i.PLAYER), this.bodyX = this.body.x, this.bodyY = this.body.y, this.previousTileX = this.tileX = o.pxToTile(this.bodyX), this.previousTileY = this.tileY = o.pxToTile(this.bodyY), this.invincible = !1, this.health = this.maxHealth = t.ARMOR_LEVELS[r.armor], this.moveSpeed = t.SPEED_LEVELS[r.speed], this.turretSpeed = t.TURRET_LEVELS[r.turret], this.viewAngle = t.VIEW_ANGLE_LEVELS[r.sight], this.viewDistance = t.VIEW_DISTANCE_LEVELS[r.sight], this.follow = null, this.autoAim = !1, this.autoAimTarget = null, this.autoAimDisableDelay = 0, o.objectsLayer.add(this), this.weapons = [new p(this, {
             id: "player/minigun",
             team: l.PLAYER,
             spawnDistance: 15,
@@ -21931,7 +21931,7 @@ function() {
         var t = this.body.velocity;
         Math.sqrt(t.x * t.x + t.y * t.y) > .01 ? (r(this.bodySprite, this.body.velocity, 8), this.bodySprite.animations.currentAnim.isPlaying || this.bodySprite.animations.play("move")) : this.bodySprite.animations.currentAnim.isPlaying && this.bodySprite.animations.stop()
     }, t.prototype.changeWeapon = function(t) {
-        this.weapons[t] && this.weapons[t] !== this.weapon && (this.weapon && this.weapon.deactivate(), this.weaponIndex = t, this.weapon = this.weapons[t], this.weapon.activate(), this.turretSprite.loadTexture("game.png", "game/" + this.weapon.id + ".png"), this.turretSprite.scale.set(.5), this.game.add.tween(this.turretSprite.scale).to({
+        this.weapons[t] && this.weapons[t] !== this.weapon && (this.weapon && this.weapon.deactivate(), this.weaponIndex = t, this.weapon = this.weapons[t], this.weapon.activate(), this.turretSprite.loadTexture("game.webp", "game/" + this.weapon.id + ".webp"), this.turretSprite.scale.set(.5), this.game.add.tween(this.turretSprite.scale).to({
             x: 1,
             y: 1
         }, 750, Phaser.Easing.Elastic.Out, !0), this.level.hud.ammoVial.progress = this.weapon.ammo === 1 / 0 ? 1 : this.weapon.ammo / this.weapon.maxAmmo, c.playSound("weapon_change.mp3"))
@@ -22002,9 +22002,9 @@ function() {
     "use strict";
 
     function t(t, e, i, o) {
-        Phaser.Group.call(this, t), this.crates = t.make.image(316, -79, "game.png", "game/tutorial/crates.png"), this.crates.anchor.set(.5, .5), this.crates.alpha = 0, this.add(this.crates), i.events.onKilled.add(this.hideCratesHint, this);
-        var s = t.make.sprite(50, -76, "game.png");
-        s.animations.add("default", ["game/bonuses/ammo_shotgun.png", "game/bonuses/ammo_ricochet.png", "game/bonuses/ammo_cannon.png", "game/bonuses/ammo_rockets.png", "game/bonuses/.png", "game/bonuses/ammo_laser.png"], 4, !0), s.animations.play("default"), this.crates.addChild(s), this.barrels = t.make.image(257, 300, "game.png", "game/tutorial/barrels.png"), this.barrels.anchor.set(.5, .5), this.barrels.alpha = 0, this.add(this.barrels), o.events.onKilled.add(this.hideBarrelsHint, this), this.gates = t.make.image(152, 254, "game.png", "game/tutorial/gates.png"), this.gates.anchor.set(.5, .5), this.add(this.gates), e.events.onKilled.add(this.hideGatesHint, this), this.objective = t.make.image(678, -55, "game.png", "game/tutorial/objective.png"), this.objective.anchor.set(.5, .5), this.objective.alpha = 0, this.add(this.objective), this.hintsCompleted = 0
+        Phaser.Group.call(this, t), this.crates = t.make.image(316, -79, "game.webp", "game/tutorial/crates.webp"), this.crates.anchor.set(.5, .5), this.crates.alpha = 0, this.add(this.crates), i.events.onKilled.add(this.hideCratesHint, this);
+        var s = t.make.sprite(50, -76, "game.webp");
+        s.animations.add("default", ["game/bonuses/ammo_shotgun.webp", "game/bonuses/ammo_ricochet.webp", "game/bonuses/ammo_cannon.webp", "game/bonuses/ammo_rockets.webp", "game/bonuses/.webp", "game/bonuses/ammo_laser.webp"], 4, !0), s.animations.play("default"), this.crates.addChild(s), this.barrels = t.make.image(257, 300, "game.webp", "game/tutorial/barrels.webp"), this.barrels.anchor.set(.5, .5), this.barrels.alpha = 0, this.add(this.barrels), o.events.onKilled.add(this.hideBarrelsHint, this), this.gates = t.make.image(152, 254, "game.webp", "game/tutorial/gates.webp"), this.gates.anchor.set(.5, .5), this.add(this.gates), e.events.onKilled.add(this.hideGatesHint, this), this.objective = t.make.image(678, -55, "game.webp", "game/tutorial/objective.webp"), this.objective.anchor.set(.5, .5), this.objective.alpha = 0, this.add(this.objective), this.hintsCompleted = 0
     }
     t.prototype = Object.create(Phaser.Group.prototype), t.prototype.hideGatesHint = function() {
         this.game.add.tween(this.gates).to({
@@ -22032,7 +22032,7 @@ function() {
     "use strict";
 
     function t(t, i, o, s, n, r, a) {
-        this.fogResolution = 12, Phaser.Image.call(this, t, 0, 0, new Phaser.RenderTexture(t, n * this.fogResolution, r * this.fogResolution, null, 1)), this.fogWidth = n, this.fogHeight = r, this.width = n * a, this.height = r * a, this.circle = t.make.image(0, 0, "game.png", "game/fog_circle.png"), this.circle.anchor.set(.5, .5), this.smallCircle = t.make.image(0, 0, "game.png", "game/fog_tile.png"), this.smallCircle.anchor.set(.5, .5), this.tileSize = a, this.tileOffsetX = o, this.tileOffsetY = s, this.shader = new PIXI.AbstractFilter(t.cache.getShader("inverse_alpha.frag")), this.tiles = e(n, r, !1), i.add(this)
+        this.fogResolution = 12, Phaser.Image.call(this, t, 0, 0, new Phaser.RenderTexture(t, n * this.fogResolution, r * this.fogResolution, null, 1)), this.fogWidth = n, this.fogHeight = r, this.width = n * a, this.height = r * a, this.circle = t.make.image(0, 0, "game.webp", "game/fog_circle.webp"), this.circle.anchor.set(.5, .5), this.smallCircle = t.make.image(0, 0, "game.webp", "game/fog_tile.webp"), this.smallCircle.anchor.set(.5, .5), this.tileSize = a, this.tileOffsetX = o, this.tileOffsetY = s, this.shader = new PIXI.AbstractFilter(t.cache.getShader("inverse_alpha.frag")), this.tiles = e(n, r, !1), i.add(this)
     }
     var e = window.AT.common.create2DArray;
     t.prototype = Object.create(Phaser.Image.prototype), t.prototype.revealTile = function(t, e) {
@@ -22049,11 +22049,11 @@ function() {
     "use strict";
 
     function t(t, e) {
-        Phaser.Group.call(this, t, e), this.medal = t.add.image(100, 0, "game.png", "game/achievements/hunter.png", this), this.medal.alpha = 0, this.medal.anchor.set(.5, .5), this.queue = [], this.displaying = !1, this.resize(), this.resize = this.resize.bind(this), window.addEventListener("resize", this.resize)
+        Phaser.Group.call(this, t, e), this.medal = t.add.image(100, 0, "game.webp", "game/achievements/hunter.webp", this), this.medal.alpha = 0, this.medal.anchor.set(.5, .5), this.queue = [], this.displaying = !1, this.resize(), this.resize = this.resize.bind(this), window.addEventListener("resize", this.resize)
     }
     var e = window.AT.audio;
     t.prototype = Object.create(Phaser.Group.prototype), t.prototype._show = function(t) {
-        t || (t = this.queue.shift()), this.medal.loadTexture("game.png", "game/achievements/" + t + ".png"), this.game.add.tween(this.medal).to({
+        t || (t = this.queue.shift()), this.medal.loadTexture("game.webp", "game/achievements/" + t + ".webp"), this.game.add.tween(this.medal).to({
             x: 0,
             alpha: 1
         }, 500, Phaser.Easing.Linear.None, !0).onComplete.add(this._hide, this), this.displaying = !0, e.playSound("achievement.mp3")
@@ -22076,7 +22076,7 @@ function() {
     "use strict";
 
     function t(t, e) {
-        Phaser.Group.call(this, t, e), this.hiding = !1, this.overlay = t.add.image(0, 0, "game.png", "game/alerts/overlay.png", this), this.overlay.alpha = .5, this.overlay.inputEnabled = !0, this.window = t.add.group(this), this.alpha = 0, this.game.add.tween(this).to({
+        Phaser.Group.call(this, t, e), this.hiding = !1, this.overlay = t.add.image(0, 0, "game.webp", "game/alerts/overlay.webp", this), this.overlay.alpha = .5, this.overlay.inputEnabled = !0, this.window = t.add.group(this), this.alpha = 0, this.game.add.tween(this).to({
             alpha: 1
         }, 250, Phaser.Easing.Linear.None, !0), this.resize(), this.resize = this.resize.bind(this), window.addEventListener("resize", this.resize)
     }
@@ -22095,7 +22095,7 @@ function() {
     "use strict";
 
     function t(t, o) {
-        e.call(this, t, o), t.add.image(0, 0, "menu/title.png", "menu/title/credits.png", this.window).anchor.set(.5, .5), i(t, 82, -135, "menu/title.png", "menu/title/buttons", this.hide, this, this.window)
+        e.call(this, t, o), t.add.image(0, 0, "menu/title.webp", "menu/title/credits.webp", this.window).anchor.set(.5, .5), i(t, 82, -135, "menu/title.webp", "menu/title/buttons", this.hide, this, this.window)
     }
     var e = window.AT.gui.BaseAlert,
         i = window.AT.common.closeButton;
@@ -22105,7 +22105,7 @@ function() {
     "use strict";
 
     function t(t, n) {
-        o.call(this, t, n), t.add.image(0, 0, "menu/upgrades/parts.png", "menu/upgrades/parts/stats.png", this.window).anchor.set(.5, .5), i(t, 100, -180, "menu/upgrades/parts.png", "menu/upgrades/parts/buttons", this.hide, this, this.window);
+        o.call(this, t, n), t.add.image(0, 0, "menu/upgrades/parts.webp", "menu/upgrades/parts/stats.webp", this.window).anchor.set(.5, .5), i(t, 100, -180, "menu/upgrades/parts.webp", "menu/upgrades/parts/buttons", this.hide, this, this.window);
         var r = s.current.stats;
         this.addLabel(161, -108, r.tanksDestroyed, this.window), this.addLabel(161, -77, r.turretsDestroyed, this.window), this.addLabel(161, -46, r.spawnersDestroyed, this.window), this.addLabel(161, -15, r.wallsDestroyed, this.window), this.addLabel(161, 18, r.coinsCollected, this.window), this.addLabel(161, 49, r.barrelsExploded, this.window), this.addLabel(161, 82, r.cratesDestroyed, this.window);
         var a = t.add.text(0, 160, e(r.moneyEarned), null, this.window);
@@ -22124,7 +22124,7 @@ function() {
     "use strict";
 
     function t(t, o) {
-        i.call(this, t, o), t.add.image(0, 0, "menu/upgrades/parts.png", "menu/upgrades/parts/difficulty.png", this.window).anchor.set(.5, .5), e(this.game, -69, -40, "menu/upgrades/parts.png", "menu/upgrades/parts/buttons/easy", this.chooseDifficulty.bind(this, 0), this, this.window), e(this.game, -69, 15, "menu/upgrades/parts.png", "menu/upgrades/parts/buttons/medium", this.chooseDifficulty.bind(this, 1), this, this.window), e(this.game, -69, 70, "menu/upgrades/parts.png", "menu/upgrades/parts/buttons/hard", this.chooseDifficulty.bind(this, 2), this, this.window)
+        i.call(this, t, o), t.add.image(0, 0, "menu/upgrades/parts.webp", "menu/upgrades/parts/difficulty.webp", this.window).anchor.set(.5, .5), e(this.game, -69, -40, "menu/upgrades/parts.webp", "menu/upgrades/parts/buttons/easy", this.chooseDifficulty.bind(this, 0), this, this.window), e(this.game, -69, 15, "menu/upgrades/parts.webp", "menu/upgrades/parts/buttons/medium", this.chooseDifficulty.bind(this, 1), this, this.window), e(this.game, -69, 70, "menu/upgrades/parts.webp", "menu/upgrades/parts/buttons/hard", this.chooseDifficulty.bind(this, 2), this, this.window)
     }
     var e = window.AT.common.button,
         i = window.AT.gui.BaseAlert,
@@ -22137,9 +22137,9 @@ function() {
     "use strict";
 
     function t(t, o, s) {
-        e.call(this, t, o), t.add.image(0, 0, "menu/help/" + s + ".png", null, this.window).anchor.set(.5, .5);
+        e.call(this, t, o), t.add.image(0, 0, "menu/help/" + s + ".webp", null, this.window).anchor.set(.5, .5);
         var n = new Phaser.Point;
-        "keyboard_moving" === s ? n.set(90, -150) : "keyboard_shooting" === s ? n.set(90, -120) : s.startsWith("touch") && n.set(210, -220), i(t, n.x, n.y, "menu/upgrades/parts.png", "menu/upgrades/parts/buttons", this.hide, this, this.window)
+        "keyboard_moving" === s ? n.set(90, -150) : "keyboard_shooting" === s ? n.set(90, -120) : s.startsWith("touch") && n.set(210, -220), i(t, n.x, n.y, "menu/upgrades/parts.webp", "menu/upgrades/parts/buttons", this.hide, this, this.window)
     }
     var e = window.AT.gui.BaseAlert,
         i = window.AT.common.closeButton;
@@ -22149,7 +22149,7 @@ function() {
     "use strict";
 
     function t(t, e, i) {
-        Phaser.Group.call(this, t, e), this._progress = 1, this.shake = 0, this.shakeGroup = t.make.group(this), t.add.image(2, 0, "game.png", "game/hud/bar_empty.png", this.shakeGroup), this.bar = t.add.image(2, 0, "game.png", i, this.shakeGroup), this.bar.crop(new Phaser.Rectangle(0, 0, 106, 21), !1), t.add.image(0, 0, "game.png", "game/hud/bar_frame.png", this.shakeGroup)
+        Phaser.Group.call(this, t, e), this._progress = 1, this.shake = 0, this.shakeGroup = t.make.group(this), t.add.image(2, 0, "game.webp", "game/hud/bar_empty.webp", this.shakeGroup), this.bar = t.add.image(2, 0, "game.webp", i, this.shakeGroup), this.bar.crop(new Phaser.Rectangle(0, 0, 106, 21), !1), t.add.image(0, 0, "game.webp", "game/hud/bar_frame.webp", this.shakeGroup)
     }
     t.prototype = Object.create(Phaser.Group.prototype), t.prototype.updateProgress = function(t, e) {
         this.progress = t, this.shake = e
@@ -22170,7 +22170,7 @@ function() {
     "use strict";
 
     function t(t, e) {
-        this.normalFrame = "game/hud/" + e + ".png", this.activeFrame = "game/hud/" + e + "_active.png", Phaser.Button.call(this, t, 0, 0, "game.png", null, null, null, this.normalFrame, null, null), this.tank = null, this.weapon = null, this.active = !1, this.ammoBar = t.make.image(0, 0, "game.png", "game/hud/bar_ammo_small.png"), this.ammoBar.anchor.set(1, 1), this.ammoBar.position.set(51, 37), this.addChild(this.ammoBar), this.lastAmmo = -1
+        this.normalFrame = "game/hud/" + e + ".webp", this.activeFrame = "game/hud/" + e + "_active.webp", Phaser.Button.call(this, t, 0, 0, "game.webp", null, null, null, this.normalFrame, null, null), this.tank = null, this.weapon = null, this.active = !1, this.ammoBar = t.make.image(0, 0, "game.webp", "game/hud/bar_ammo_small.webp"), this.ammoBar.anchor.set(1, 1), this.ammoBar.position.set(51, 37), this.addChild(this.ammoBar), this.lastAmmo = -1
     }
     t.prototype = Object.create(Phaser.Button.prototype), t.prototype.update = function() {
         null != this.weapon ? (this.alpha = 1, this.active || this.tank.weapon !== this.weapon ? this.active && this.tank.weapon !== this.weapon && (this.setFrames(this.normalFrame, this.normalFrame, this.normalFrame, this.normalFrame), this.active = !1) : (this.setFrames(this.activeFrame, this.activeFrame, this.activeFrame, this.activeFrame), this.active = !0), this.lastAmmo !== this.weapon.ammo && this.weapon.maxAmmo !== 1 / 0 && (this.ammoBar.scale.y = this.weapon.ammo / this.weapon.maxAmmo, this.lastAmmo = this.weapon.ammo)) : (this.alpha = .5, this.ammoBar.scale.y = 0)
@@ -22200,36 +22200,36 @@ function() {
     "use strict";
 
     function t(t, e, i, o, s, n, r, a) {
-        o = "menu/upgrades/parts/" + o + ".png", Phaser.Button.call(this, t, e, i, "menu/upgrades/parts.png", n, r, o, o, o, o), this.upgradeLevel = s, this.gauge = t.make.image(9, 9, "menu/upgrades/parts.png", "menu/upgrades/parts/gauge_" + s + ".png"), this.addChild(this.gauge), a && a.add ? a.add(this) : a && a.addChild && a.addChild(this), 3 === s && (this.inputEnabled = !1)
+        o = "menu/upgrades/parts/" + o + ".webp", Phaser.Button.call(this, t, e, i, "menu/upgrades/parts.webp", n, r, o, o, o, o), this.upgradeLevel = s, this.gauge = t.make.image(9, 9, "menu/upgrades/parts.webp", "menu/upgrades/parts/gauge_" + s + ".webp"), this.addChild(this.gauge), a && a.add ? a.add(this) : a && a.addChild && a.addChild(this), 3 === s && (this.inputEnabled = !1)
     }
     var e = window.AT.common.flashElement;
     t.prototype = Object.create(Phaser.Button.prototype), t.prototype.increase = function() {
-        this.upgradeLevel < 3 && (e(this), e(this.gauge), this.upgradeLevel += 1, this.gauge.loadTexture("menu/upgrades/parts.png", "menu/upgrades/parts/gauge_" + this.upgradeLevel + ".png"), 3 === this.upgradeLevel && (this.inputEnabled = !1))
+        this.upgradeLevel < 3 && (e(this), e(this.gauge), this.upgradeLevel += 1, this.gauge.loadTexture("menu/upgrades/parts.webp", "menu/upgrades/parts/gauge_" + this.upgradeLevel + ".webp"), 3 === this.upgradeLevel && (this.inputEnabled = !1))
     }, window.AT.gui.Gauge = t
 }(),
 function() {
     "use strict";
 
     function t(t, e, i, r, d, c, p, u) {
-        Phaser.Group.call(this, t, u), this.position.set(e, i), this.weaponClickCallback = d, this.ammoClickCallback = c, this.callbackContext = p, this.frameName = r, this.weaponButton = t.add.button(0, 0, s, this.weaponClick, this, n, n, n, n, this), this.title = t.add.image(77, 8, s, "menu/upgrades/parts/" + r + "_label.png"), this.title.anchor.set(.5, 0), this.weaponButton.addChild(this.title), this.levels = [t.make.image(70, 65, s, a), t.make.image(70, 47, s, a), t.make.image(70, 29, s, a)];
+        Phaser.Group.call(this, t, u), this.position.set(e, i), this.weaponClickCallback = d, this.ammoClickCallback = c, this.callbackContext = p, this.frameName = r, this.weaponButton = t.add.button(0, 0, s, this.weaponClick, this, n, n, n, n, this), this.title = t.add.image(77, 8, s, "menu/upgrades/parts/" + r + "_label.webp"), this.title.anchor.set(.5, 0), this.weaponButton.addChild(this.title), this.levels = [t.make.image(70, 65, s, a), t.make.image(70, 47, s, a), t.make.image(70, 29, s, a)];
         for (var b = 0; b < this.levels.length; b++) this.levels[b].visible = !1, this.weaponButton.addChild(this.levels[b]);
-        this.icon = t.make.image(48, 79, s, "menu/upgrades/parts/" + r + ".png"), this.icon.anchor.set(0, 1), this.icon.scale.set(.85, .85), this.weaponButton.addChild(this.icon), this.weaponPrice = t.add.text(77, 92, "", null, this), this.weaponPrice.anchor.set(.5, 0), this.weaponPrice.font = "Gunplay", this.weaponPrice.fontWeight = "400", this.weaponPrice.fontSize = 18, this.weaponPrice.fill = "#E9B300", "minigun" !== r ? (this.ammoButton = t.add.button(100, 0, s, this.ammoClick, this, h, h, h, h, this), this.ammoButton.visible = !1, this.ammoBar = t.make.image(22, 74, s, "menu/upgrades/parts/ammo_bar.png"), this.ammoBar.anchor.set(0, 1), this.ammoButton.addChild(this.ammoBar), this.ammoPrice = t.add.text(127, 92, "", null, this), this.ammoPrice.visible = !1, this.ammoPrice.anchor.set(.5, 0), this.ammoPrice.font = "Gunplay", this.ammoPrice.fontWeight = "400", this.ammoPrice.fontSize = 18, this.ammoPrice.fill = "#E9B300", this.setAmmoPercent(o.getAmmoPercent(r))) : t.add.image(100, 0, s, l, this), this.setLevel(o.current.game[r + "Level"])
+        this.icon = t.make.image(48, 79, s, "menu/upgrades/parts/" + r + ".webp"), this.icon.anchor.set(0, 1), this.icon.scale.set(.85, .85), this.weaponButton.addChild(this.icon), this.weaponPrice = t.add.text(77, 92, "", null, this), this.weaponPrice.anchor.set(.5, 0), this.weaponPrice.font = "Gunplay", this.weaponPrice.fontWeight = "400", this.weaponPrice.fontSize = 18, this.weaponPrice.fill = "#E9B300", "minigun" !== r ? (this.ammoButton = t.add.button(100, 0, s, this.ammoClick, this, h, h, h, h, this), this.ammoButton.visible = !1, this.ammoBar = t.make.image(22, 74, s, "menu/upgrades/parts/ammo_bar.webp"), this.ammoBar.anchor.set(0, 1), this.ammoButton.addChild(this.ammoBar), this.ammoPrice = t.add.text(127, 92, "", null, this), this.ammoPrice.visible = !1, this.ammoPrice.anchor.set(.5, 0), this.ammoPrice.font = "Gunplay", this.ammoPrice.fontWeight = "400", this.ammoPrice.fontSize = 18, this.ammoPrice.fill = "#E9B300", this.setAmmoPercent(o.getAmmoPercent(r))) : t.add.image(100, 0, s, l, this), this.setLevel(o.current.game[r + "Level"])
     }
     var e = window.AT.SETTINGS,
         i = window.AT.common.formatMoney,
         o = window.AT.profile,
-        s = "menu/upgrades/parts.png",
-        n = "menu/upgrades/parts/frame_wide.png",
-        r = "menu/upgrades/parts/frame.png",
-        a = "menu/upgrades/parts/buttons/off.png",
-        h = "menu/upgrades/parts/ammo.png",
-        l = "menu/upgrades/parts/ammo_infinite.png";
+        s = "menu/upgrades/parts.webp",
+        n = "menu/upgrades/parts/frame_wide.webp",
+        r = "menu/upgrades/parts/frame.webp",
+        a = "menu/upgrades/parts/buttons/off.webp",
+        h = "menu/upgrades/parts/ammo.webp",
+        l = "menu/upgrades/parts/ammo_infinite.webp";
     t.prototype = Object.create(Phaser.Group.prototype), t.prototype.setAmmoPercent = function(t) {
         this.ammoBar.height = 45 * t, 1 === t ? (this.ammoButton.inputEnabled = !1, this.ammoPrice.text = "MAX") : this.ammoPrice.text = i(e.AMMO_PRICES[this.frameName])
     }, t.prototype.setLevel = function(t) {
         if (this.upgradeLevel = t, t >= 0) {
             this.weaponButton.setFrames(r, r, r, r), this.title.position.x = 47, this.icon.position.x = 8, this.weaponPrice.position.x = 47, this.ammoButton && (this.ammoButton.visible = !0, this.ammoPrice.visible = !0);
-            for (var o = 0; o < this.levels.length; o++) this.levels[o].visible = !0, o < t && this.levels[o].loadTexture(s, "menu/upgrades/parts/buttons/on.png");
+            for (var o = 0; o < this.levels.length; o++) this.levels[o].visible = !0, o < t && this.levels[o].loadTexture(s, "menu/upgrades/parts/buttons/on.webp");
             3 === t && (this.weaponButton.inputEnabled = !1)
         }
         this.weaponPrice.text = t < 3 ? i(e.PRICES[this.frameName][t + 1]) : "MAX"
@@ -22243,7 +22243,7 @@ function() {
     "use strict";
 
     function t(t, i, o, s, n, r) {
-        Phaser.Group.call(this, t, i), this.overlay = t.make.image(0, 0, "game.png", "game/alerts/overlay.png"), this.overlay.alpha = .5, this.overlay.inputEnabled = !0, this.add(this.overlay), this.window = t.make.image(0, 0, "game.png", "game/alerts/abandon.png"), this.window.anchor.set(.5, .5), this.add(this.window), this.abandonButton = e(this.game, -148, 40, "game.png", "game/buttons/abandon", o, s, this.window), this.cancelButton = e(this.game, 15, 40, "game.png", "game/buttons/cancel", n, r, this.window), this.alpha = 0, this.game.add.tween(this).to({
+        Phaser.Group.call(this, t, i), this.overlay = t.make.image(0, 0, "game.webp", "game/alerts/overlay.webp"), this.overlay.alpha = .5, this.overlay.inputEnabled = !0, this.add(this.overlay), this.window = t.make.image(0, 0, "game.webp", "game/alerts/abandon.webp"), this.window.anchor.set(.5, .5), this.add(this.window), this.abandonButton = e(this.game, -148, 40, "game.webp", "game/buttons/abandon", o, s, this.window), this.cancelButton = e(this.game, 15, 40, "game.webp", "game/buttons/cancel", n, r, this.window), this.alpha = 0, this.game.add.tween(this).to({
             alpha: 1
         }, 250, Phaser.Easing.Linear.None, !0), this.resize(), this.resize = this.resize.bind(this), window.addEventListener("resize", this.resize)
     }
@@ -22263,7 +22263,7 @@ function() {
     "use strict";
 
     function t(t, i, o, s, n, r) {
-        Phaser.Group.call(this, t, i), this.onContinue = n, this.onContinueContext = r, this.overlay = t.make.image(0, 0, "game.png", "game/alerts/overlay.png"), this.overlay.alpha = .5, this.overlay.inputEnabled = !0, this.add(this.overlay), this.window = t.add.group(this), this.header = t.make.image(0, -200, "game.png", o ? "game/summary/header_complete.png" : "game/summary/header_failed.png"), this.header.alpha = 0, this.header.anchor.set(.5, .5), this.window.add(this.header), this.profit = t.make.image(0, -10, "game.png", "game/summary/profit.png"), this.profit.alpha = 0, this.profit.anchor.set(.5, .5), this.window.add(this.profit), this.profitValue = t.make.text(132, 4, ""), this.profitValue.anchor.set(1, .5), this.profitValue.font = "Gunplay", this.profitValue.fontWeight = "400", this.profitValue.fontSize = 34, this.profitValue.fill = "#FFA700", this.profit.addChild(this.profitValue), this.updateProfit(s), o ? this.continueButton = null : (this.continueButton = e(t, 0, 275, "game.png", "game/buttons/continue", this.continue, this, this.window), this.continueButton.alpha = 0, this.continueButton.anchor.set(.5, .5), t.add.tween(this.continueButton).to({
+        Phaser.Group.call(this, t, i), this.onContinue = n, this.onContinueContext = r, this.overlay = t.make.image(0, 0, "game.webp", "game/alerts/overlay.webp"), this.overlay.alpha = .5, this.overlay.inputEnabled = !0, this.add(this.overlay), this.window = t.add.group(this), this.header = t.make.image(0, -200, "game.webp", o ? "game/summary/header_complete.webp" : "game/summary/header_failed.webp"), this.header.alpha = 0, this.header.anchor.set(.5, .5), this.window.add(this.header), this.profit = t.make.image(0, -10, "game.webp", "game/summary/profit.webp"), this.profit.alpha = 0, this.profit.anchor.set(.5, .5), this.window.add(this.profit), this.profitValue = t.make.text(132, 4, ""), this.profitValue.anchor.set(1, .5), this.profitValue.font = "Gunplay", this.profitValue.fontWeight = "400", this.profitValue.fontSize = 34, this.profitValue.fill = "#FFA700", this.profit.addChild(this.profitValue), this.updateProfit(s), o ? this.continueButton = null : (this.continueButton = e(t, 0, 275, "game.webp", "game/buttons/continue", this.continue, this, this.window), this.continueButton.alpha = 0, this.continueButton.anchor.set(.5, .5), t.add.tween(this.continueButton).to({
             y: 175,
             alpha: 1
         }, 250, Phaser.Easing.Quadratic.Out, !0, 2775)), this.alpha = 0, this.game.add.tween(this).to({
@@ -22305,8 +22305,8 @@ function() {
     "use strict";
 
     function t(t, e) {
-        Phaser.Group.call(this, t, e), this.fight = t.add.image(0, 0, "game.png", "game/hud/fight.png", this), this.fight.anchor.set(.5, .5), this.fight.visible = !1, this.fightMessageComplete = !1, this.profitBg = t.add.image(-270, -74, "game.png", "game/hud/profit.png", this), this._hideProfit(), this.profitValue = t.make.text(204, 17, "0$"), this.profitValue.anchor.set(1, .5), this.profitValue.font = "Gunplay", this.profitValue.fontWeight = "400", this.profitValue.fontSize = 20, this.profitValue.fill = "#DBB400", this.profitBg.addChild(this.profitValue), this.profitShowTween = null, this.profitHideTween = null, this.profitDisplayTime = 0, this.comboBg = t.add.image(162, -74, "game.png", "game/hud/combo.png", this), this._hideCombo(), this.comboValue = t.make.text(26, 18, "0"), this.comboValue.anchor.set(1, .5), this.comboValue.font = "Gunplay", this.comboValue.fontWeight = "400", this.comboValue.fontSize = 20, this.comboValue.fill = "#DBB400", this.comboBg.addChild(this.comboValue), this.comboShowTween = null, this.comboHideTween = null, this.bg = t.add.image(0, 0, "game.png", "game/hud/background.png", this), this.bg.anchor.set(.5, 1), this.bg.inputEnabled = !0, this.healthVial = new r(t, this, "game/hud/bar_health.png"), this.healthVial.position.set(-151, -26), this.ammoVial = new r(t, this, "game/hud/bar_ammo.png"), this.ammoVial.position.set(-35, -26), this.reloadVial = new r(t, this, "game/hud/bar_reload.png"), this.reloadVial.position.set(81, -26), this.minigun = new a(t, "minigun"), this.minigun.position.set(-153.5, -71), this.add(this.minigun), this.shotgun = new a(t, "shotgun"), this.shotgun.position.set(-95.5, -71), this.add(this.shotgun), this.ricochet = new a(t, "ricochet"), this.ricochet.position.set(-37.5, -72), this.add(this.ricochet), this.cannon = new a(t, "cannon"), this.cannon.position.set(20.5, -72), this.add(this.cannon), this.rockets = new a(t, "rockets"), this.rockets.position.set(78.5, -72),
-            this.add(this.rockets), this.laser = new a(t, "laser"), this.laser.position.set(136.5, -72), this.add(this.laser), this.menuButton = i(t, -284, -65, "game.png", "game/buttons/menu", null, this, this), this.soundCheckbox = new h(t, this, "game.png", "game/buttons/sound_normal.png", "game/buttons/sound_hover.png", "game/buttons/off.png", "game/buttons/on.png"), this.soundCheckbox.position.set(211, -16), this.soundCheckbox.checked = s.current.game.sound, this.soundCheckbox.onToggle = n.toggleSound, this.musicCheckbox = new h(t, this, "game.png", "game/buttons/music_normal.png", "game/buttons/music_hover.png", "game/buttons/off.png", "game/buttons/on.png"), this.musicCheckbox.position.set(243, -17), this.musicCheckbox.checked = s.current.game.music, this.musicCheckbox.onToggle = n.toggleMusic, this.pauseCheckbox = new h(t, this, "game.png", "game/buttons/pause_normal.png", "game/buttons/pause_hover.png", "game/buttons/off.png", "game/buttons/on.png"), this.pauseCheckbox.position.set(272, -16)
+        Phaser.Group.call(this, t, e), this.fight = t.add.image(0, 0, "game.webp", "game/hud/fight.webp", this), this.fight.anchor.set(.5, .5), this.fight.visible = !1, this.fightMessageComplete = !1, this.profitBg = t.add.image(-270, -74, "game.webp", "game/hud/profit.webp", this), this._hideProfit(), this.profitValue = t.make.text(204, 17, "0$"), this.profitValue.anchor.set(1, .5), this.profitValue.font = "Gunplay", this.profitValue.fontWeight = "400", this.profitValue.fontSize = 20, this.profitValue.fill = "#DBB400", this.profitBg.addChild(this.profitValue), this.profitShowTween = null, this.profitHideTween = null, this.profitDisplayTime = 0, this.comboBg = t.add.image(162, -74, "game.webp", "game/hud/combo.webp", this), this._hideCombo(), this.comboValue = t.make.text(26, 18, "0"), this.comboValue.anchor.set(1, .5), this.comboValue.font = "Gunplay", this.comboValue.fontWeight = "400", this.comboValue.fontSize = 20, this.comboValue.fill = "#DBB400", this.comboBg.addChild(this.comboValue), this.comboShowTween = null, this.comboHideTween = null, this.bg = t.add.image(0, 0, "game.webp", "game/hud/background.webp", this), this.bg.anchor.set(.5, 1), this.bg.inputEnabled = !0, this.healthVial = new r(t, this, "game/hud/bar_health.webp"), this.healthVial.position.set(-151, -26), this.ammoVial = new r(t, this, "game/hud/bar_ammo.webp"), this.ammoVial.position.set(-35, -26), this.reloadVial = new r(t, this, "game/hud/bar_reload.webp"), this.reloadVial.position.set(81, -26), this.minigun = new a(t, "minigun"), this.minigun.position.set(-153.5, -71), this.add(this.minigun), this.shotgun = new a(t, "shotgun"), this.shotgun.position.set(-95.5, -71), this.add(this.shotgun), this.ricochet = new a(t, "ricochet"), this.ricochet.position.set(-37.5, -72), this.add(this.ricochet), this.cannon = new a(t, "cannon"), this.cannon.position.set(20.5, -72), this.add(this.cannon), this.rockets = new a(t, "rockets"), this.rockets.position.set(78.5, -72),
+            this.add(this.rockets), this.laser = new a(t, "laser"), this.laser.position.set(136.5, -72), this.add(this.laser), this.menuButton = i(t, -284, -65, "game.webp", "game/buttons/menu", null, this, this), this.soundCheckbox = new h(t, this, "game.webp", "game/buttons/sound_normal.webp", "game/buttons/sound_hover.webp", "game/buttons/off.webp", "game/buttons/on.webp"), this.soundCheckbox.position.set(211, -16), this.soundCheckbox.checked = s.current.game.sound, this.soundCheckbox.onToggle = n.toggleSound, this.musicCheckbox = new h(t, this, "game.webp", "game/buttons/music_normal.webp", "game/buttons/music_hover.webp", "game/buttons/off.webp", "game/buttons/on.webp"), this.musicCheckbox.position.set(243, -17), this.musicCheckbox.checked = s.current.game.music, this.musicCheckbox.onToggle = n.toggleMusic, this.pauseCheckbox = new h(t, this, "game.webp", "game/buttons/pause_normal.webp", "game/buttons/pause_hover.webp", "game/buttons/off.webp", "game/buttons/on.webp"), this.pauseCheckbox.position.set(272, -16)
     }
     var e = window.Phaser.Easing.Exponential,
         i = window.AT.common.button,
@@ -22373,9 +22373,9 @@ function() {
     }
     window.AT.SITE_LOCK_TARGET;
     t.prototype.preload = function() {
-        this.load.atlasJSONHash("lock.png", "images/lock.png", "images/lock.json")
+        this.load.atlasJSONHash("lock.webp", "images/lock.webp", "images/lock.json")
     }, t.prototype.create = function() {
-        this.stage.backgroundColor = 0, this.root = this.add.group(), this.add.image(300, 400, "lock.png", "lock/message.png", this.root).anchor.set(.5, 1), this.add.button(300, 420, "lock.png", this.playClick, this, "lock/button_hover.png", "lock/button.png", "lock/button.png", "lock/button.png", this.root).anchor.set(.5, .5), this.camera.bounds = null, this.resize(window.innerWidth, window.innerHeight), this.camera.flash(0, 250)
+        this.stage.backgroundColor = 0, this.root = this.add.group(), this.add.image(300, 400, "lock.webp", "lock/message.webp", this.root).anchor.set(.5, 1), this.add.button(300, 420, "lock.webp", this.playClick, this, "lock/button_hover.webp", "lock/button.webp", "lock/button.webp", "lock/button.webp", this.root).anchor.set(.5, .5), this.camera.bounds = null, this.resize(window.innerWidth, window.innerHeight), this.camera.flash(0, 250)
     }, t.prototype.playClick = function() {
         window.location = AT.SITE_LOCK_TARGET
     }, t.prototype.resize = function(t, e) {
@@ -22398,13 +22398,13 @@ function() {
     t.prototype.init = function() {
         this._allLoaded = !1, this._allDecoded = !1
     }, t.prototype.preload = function() {
-        this.load.atlasJSONHash("menu/loading.png", "images/menu/loading.png", "images/menu/loading.json")
+        this.load.atlasJSONHash("menu/loading.webp", "images/menu/loading.webp", "images/menu/loading.json")
     }, t.prototype.create = function() {
         this.stage.backgroundColor = 0, o.init(this.game), this.root = this.add.group();
-        var t = this.add.image(10, 60, "menu/loading.png", "menu/loading/tank.png", this.root);
-        t.anchor.set(.5, 1), this.add.image(-t.width / 2 + 70, 60 - t.height + 186, "menu/loading.png", "menu/loading/bar_empty.png", this.root), this.progress = this.add.image(-t.width / 2 + 70, 60 - t.height + 186, "menu/loading.png", "menu/loading/bar_ammo.png", this.root), this.progress.crop(new Phaser.Rectangle(0, 0, 0, 21), !1), this.add.image(-t.width / 2 + 68, 60 - t.height + 186, "menu/loading.png", "menu/loading/bar_frame.png", this.root), this.playButton = e(this.game, 0, 65, "menu/loading.png", "menu/loading/buttons/play", this.playClick, this, this.root), this.playButton.anchor.set(.5, .5), this.playButton.visible = !1, this.camera.bounds = null, this.resize(window.innerWidth, window.innerHeight), setTimeout(this.loadAssets.bind(this), 500)
+        var t = this.add.image(10, 60, "menu/loading.webp", "menu/loading/tank.webp", this.root);
+        t.anchor.set(.5, 1), this.add.image(-t.width / 2 + 70, 60 - t.height + 186, "menu/loading.webp", "menu/loading/bar_empty.webp", this.root), this.progress = this.add.image(-t.width / 2 + 70, 60 - t.height + 186, "menu/loading.webp", "menu/loading/bar_ammo.webp", this.root), this.progress.crop(new Phaser.Rectangle(0, 0, 0, 21), !1), this.add.image(-t.width / 2 + 68, 60 - t.height + 186, "menu/loading.webp", "menu/loading/bar_frame.webp", this.root), this.playButton = e(this.game, 0, 65, "menu/loading.webp", "menu/loading/buttons/play", this.playClick, this, this.root), this.playButton.anchor.set(.5, .5), this.playButton.visible = !1, this.camera.bounds = null, this.resize(window.innerWidth, window.innerHeight), setTimeout(this.loadAssets.bind(this), 500)
     }, t.prototype.loadAssets = function() {
-        this.load.onFileComplete.add(this.fileLoaded, this), this.load.onLoadComplete.add(this.allLoaded, this), this.load.shader("add_tint.frag", "scripts/shaders/add_tint.frag"), this.load.shader("grayscale.frag", "scripts/shaders/grayscale.frag"), this.load.shader("inverse_alpha.frag", "scripts/shaders/inverse_alpha.frag"), this.load.atlasJSONHash("game.png", "images/game.png", "images/game.json"), this.load.atlasJSONHash("menu/boot.png", "images/menu/boot.png", "images/menu/boot.json"), this.load.atlasJSONHash("menu/title.png", "images/menu/title.png", "images/menu/title.json"), this.load.atlasJSONHash("menu/upgrades/parts.png", "images/menu/upgrades/parts.png", "images/menu/upgrades/parts.json"), this.load.image("menu/upgrades/background.png", "images/menu/upgrades/background.png"), this.load.atlasJSONHash("menu/levels.png", "images/menu/levels.png", "images/menu/levels.json"), this.load.image("menu/congratulations.png", "images/menu/congratulations.png"), this.game.device.touch ? (this.load.image("menu/help/touch_auto_aim.png", "images/menu/help/touch_auto_aim.png"), this.load.image("menu/help/touch_moving.png", "images/menu/help/touch_moving.png"), this.load.image("menu/help/touch_shooting.png", "images/menu/help/touch_shooting.png")) : (this.load.image("menu/help/keyboard_moving.png", "images/menu/help/keyboard_moving.png"), this.load.image("menu/help/keyboard_shooting.png", "images/menu/help/keyboard_shooting.png"));
+        this.load.onFileComplete.add(this.fileLoaded, this), this.load.onLoadComplete.add(this.allLoaded, this), this.load.shader("add_tint.frag", "scripts/shaders/add_tint.frag"), this.load.shader("grayscale.frag", "scripts/shaders/grayscale.frag"), this.load.shader("inverse_alpha.frag", "scripts/shaders/inverse_alpha.frag"), this.load.atlasJSONHash("game.webp", "images/game.webp", "images/game.json"), this.load.atlasJSONHash("menu/boot.webp", "images/menu/boot.webp", "images/menu/boot.json"), this.load.atlasJSONHash("menu/title.webp", "images/menu/title.webp", "images/menu/title.json"), this.load.atlasJSONHash("menu/upgrades/parts.webp", "images/menu/upgrades/parts.webp", "images/menu/upgrades/parts.json"), this.load.image("menu/upgrades/background.webp", "images/menu/upgrades/background.webp"), this.load.atlasJSONHash("menu/levels.webp", "images/menu/levels.webp", "images/menu/levels.json"), this.load.image("menu/congratulations.webp", "images/menu/congratulations.webp"), this.game.device.touch ? (this.load.image("menu/help/touch_auto_aim.webp", "images/menu/help/touch_auto_aim.webp"), this.load.image("menu/help/touch_moving.webp", "images/menu/help/touch_moving.webp"), this.load.image("menu/help/touch_shooting.webp", "images/menu/help/touch_shooting.webp")) : (this.load.image("menu/help/keyboard_moving.webp", "images/menu/help/keyboard_moving.webp"), this.load.image("menu/help/keyboard_shooting.webp", "images/menu/help/keyboard_shooting.webp"));
         for (var t = 0; t < s.length; t++) this.load.audio(s[t], "sounds/" + s[t]);
         this.load.start()
     }, t.prototype.fileLoaded = function(t, e, i, o, s) {
@@ -22417,14 +22417,14 @@ function() {
     }, t.prototype.allLoaded = function() {
         this.sound.setDecodedCallback(s, this.go, this)
     }, t.prototype.go = function() {
-        this.game.renderer.spriteBatch.defaultShader = new PIXI.AbstractFilter(this.cache.getShader("add_tint.frag")), this.game.renderer.spriteBatch.setContext(this.game.renderer.gl), i(this.cache.getFrameByName("game.png", "game/ground_0.png")), i(this.cache.getFrameByName("game.png", "game/ground_1.png")), i(this.cache.getFrameByName("game.png", "game/wall_0.png")), i(this.cache.getFrameByName("game.png", "game/wall_1.png")), i(this.cache.getFrameByName("game.png", "game/wall_2.png")), i(this.cache.getFrameByName("game.png", "game/alerts/overlay.png")), this.playButton.visible = !0
+        this.game.renderer.spriteBatch.defaultShader = new PIXI.AbstractFilter(this.cache.getShader("add_tint.frag")), this.game.renderer.spriteBatch.setContext(this.game.renderer.gl), i(this.cache.getFrameByName("game.webp", "game/ground_0.webp")), i(this.cache.getFrameByName("game.webp", "game/ground_1.webp")), i(this.cache.getFrameByName("game.webp", "game/wall_0.webp")), i(this.cache.getFrameByName("game.webp", "game/wall_1.webp")), i(this.cache.getFrameByName("game.webp", "game/wall_2.webp")), i(this.cache.getFrameByName("game.webp", "game/alerts/overlay.webp")), this.playButton.visible = !0
     }, t.prototype.resize = function(t, e) {
         if (this.root) {
             var i = Math.min(t / 600, e / 600);
             this.camera.setSize(t, e), this.root.scale.set(i), this.root.position.x = t / 2, this.root.position.y = e / 2
         }
     }, t.prototype.shutdown = function() {
-        this.load.onFileComplete.remove(this.fileLoaded, this), this.load.onLoadComplete.remove(this.allLoaded, this), this.cache.removeImage("menu/loading.png")
+        this.load.onFileComplete.remove(this.fileLoaded, this), this.load.onLoadComplete.remove(this.allLoaded, this), this.cache.removeImage("menu/loading.webp")
     }, window.AT.menu.Loading = t
 }(),
 function() {
@@ -22436,10 +22436,10 @@ function() {
     var e = window.AT.common.button,
         i = window.AT.profile;
     t.prototype.create = function() {
-        this.stage.backgroundColor = 0, this.root = this.add.group(), this.musicAlert = this.add.image(300, 200, "menu/boot.png", "menu/boot/music.png", this.root), this.musicAlert.visible = !1, this.musicAlert.alpha = 0, this.musicAlert.anchor.set(.5, .5), e(this.game, -150, 0, "menu/boot.png", "menu/boot/buttons/enable", this.enableMusic, this, this.musicAlert), e(this.game, 15, 0, "menu/boot.png", "menu/boot/buttons/disable", this.disableMusic, this, this.musicAlert), this.soundAlert = this.add.image(300, 300, "menu/boot.png", "menu/boot/sound.png", this.root), this.soundAlert.alpha = 0, this.soundAlert.anchor.set(.5, .5), e(this.game, -150, 0, "menu/boot.png", "menu/boot/buttons/enable", this.enableSound, this, this.soundAlert), e(this.game, 15, 0, "menu/boot.png", "menu/boot/buttons/disable", this.disableSound, this, this.soundAlert), this.add.tween(this.soundAlert).to({
+        this.stage.backgroundColor = 0, this.root = this.add.group(), this.musicAlert = this.add.image(300, 200, "menu/boot.webp", "menu/boot/music.webp", this.root), this.musicAlert.visible = !1, this.musicAlert.alpha = 0, this.musicAlert.anchor.set(.5, .5), e(this.game, -150, 0, "menu/boot.webp", "menu/boot/buttons/enable", this.enableMusic, this, this.musicAlert), e(this.game, 15, 0, "menu/boot.webp", "menu/boot/buttons/disable", this.disableMusic, this, this.musicAlert), this.soundAlert = this.add.image(300, 300, "menu/boot.webp", "menu/boot/sound.webp", this.root), this.soundAlert.alpha = 0, this.soundAlert.anchor.set(.5, .5), e(this.game, -150, 0, "menu/boot.webp", "menu/boot/buttons/enable", this.enableSound, this, this.soundAlert), e(this.game, 15, 0, "menu/boot.webp", "menu/boot/buttons/disable", this.disableSound, this, this.soundAlert), this.add.tween(this.soundAlert).to({
             alpha: 1
         }, 250, Phaser.Easing.Linear.None, !0, 2250);
-        var t = this.add.image(300, 300, "menu/boot.png", "menu/boot/coolmath_games.png", this.root);
+        var t = this.add.image(300, 300, "menu/boot.webp", "menu/boot/coolmath_games.webp", this.root);
         t.anchor.set(.5, .5), t.inputEnabled = !0, this.add.tween(t).to({
             alpha: 0
         }, 250, Phaser.Easing.Linear.None, !0, 2e3).onComplete.add(function() {
@@ -22474,7 +22474,7 @@ function() {
             this.camera.setSize(t, e), this.root.scale.set(i), this.root.position.x = t / 2 - 300 * i, this.root.position.y = e / 2 - 300 * i
         }
     }, t.prototype.shutdown = function() {
-        this.cache.removeImage("menu/boot.png", !0)
+        this.cache.removeImage("menu/boot.webp", !0)
     }, window.AT.menu.Boot = t
 }(),
 function() {
@@ -22490,22 +22490,22 @@ function() {
         n = window.AT.gui.CreditsAlert,
         r = window.AT.gui.Checkbox;
     t.prototype.create = function() {
-        this.stage.backgroundColor = 885566, this.root = this.add.group(), this.add.image(300, 0, "menu/title.png", "menu/title/background.png", this.root).anchor.set(.5, 0), e(this.game, 7, 7, "menu/title.png", "menu/title/buttons/credits", this.showCredits, this, this.root), this.soundCheckbox = new r(this.game, this.root, "menu/title.png", "menu/title/buttons/sound_normal.png", "menu/title/buttons/sound_hover.png", "menu/title/buttons/off.png", "menu/title/buttons/on.png"), this.soundCheckbox.position.set(540, 47), this.soundCheckbox.button.position.y = -9, this.soundCheckbox.checked = o.current.game.sound, this.soundCheckbox.onToggle = s.toggleSound, this.musicCheckbox = new r(this.game, this.root, "menu/title.png", "menu/title/buttons/music_normal.png", "menu/title/buttons/music_hover.png", "menu/title/buttons/off.png", "menu/title/buttons/on.png"), this.musicCheckbox.position.set(578, 47), this.musicCheckbox.button.position.y = -9, this.musicCheckbox.checked = o.current.game.music, this.musicCheckbox.onToggle = s.toggleMusic, this.logo = this.add.image(255, 138, "menu/title.png", "menu/title/logo.png", this.root), this.logo.anchor.set(.5, .5), this.logo.scale.set(1.5, 1.5), this.logo.tint = 0, this.logo.alpha = 0, this.add.tween(this.logo).to({
+        this.stage.backgroundColor = 885566, this.root = this.add.group(), this.add.image(300, 0, "menu/title.webp", "menu/title/background.webp", this.root).anchor.set(.5, 0), e(this.game, 7, 7, "menu/title.webp", "menu/title/buttons/credits", this.showCredits, this, this.root), this.soundCheckbox = new r(this.game, this.root, "menu/title.webp", "menu/title/buttons/sound_normal.webp", "menu/title/buttons/sound_hover.webp", "menu/title/buttons/off.webp", "menu/title/buttons/on.webp"), this.soundCheckbox.position.set(540, 47), this.soundCheckbox.button.position.y = -9, this.soundCheckbox.checked = o.current.game.sound, this.soundCheckbox.onToggle = s.toggleSound, this.musicCheckbox = new r(this.game, this.root, "menu/title.webp", "menu/title/buttons/music_normal.webp", "menu/title/buttons/music_hover.webp", "menu/title/buttons/off.webp", "menu/title/buttons/on.webp"), this.musicCheckbox.position.set(578, 47), this.musicCheckbox.button.position.y = -9, this.musicCheckbox.checked = o.current.game.music, this.musicCheckbox.onToggle = s.toggleMusic, this.logo = this.add.image(255, 138, "menu/title.webp", "menu/title/logo.webp", this.root), this.logo.anchor.set(.5, .5), this.logo.scale.set(1.5, 1.5), this.logo.tint = 0, this.logo.alpha = 0, this.add.tween(this.logo).to({
             alpha: 1
         }, 100, Phaser.Easing.Linear.None, !0, 300), this.add.tween(this.logo.scale).to({
             x: 1,
             y: 1
-        }, 200, Phaser.Easing.Linear.None, !0, 300), this.time.events.add(300, this.playMouthPop), this.tank = this.add.image(405, 354, "menu/title.png", "menu/title/tank.png", this.root), this.tank.anchor.set(.5, .5), this.tank.scale.set(1.5, 1.5), this.tank.tint = 0, this.tank.alpha = 0, this.add.tween(this.tank).to({
+        }, 200, Phaser.Easing.Linear.None, !0, 300), this.time.events.add(300, this.playMouthPop), this.tank = this.add.image(405, 354, "menu/title.webp", "menu/title/tank.webp", this.root), this.tank.anchor.set(.5, .5), this.tank.scale.set(1.5, 1.5), this.tank.tint = 0, this.tank.alpha = 0, this.add.tween(this.tank).to({
             alpha: 1
         }, 100, Phaser.Easing.Linear.None, !0, 600), this.add.tween(this.tank.scale).to({
             x: 1,
             y: 1
-        }, 200, Phaser.Easing.Linear.None, !0, 600), this.time.events.add(600, this.playMouthPop), this.upgrades = this.add.image(130, 388, "menu/title.png", "menu/title/upgrades.png", this.root), this.upgrades.anchor.set(.5, .5), this.upgrades.scale.set(1.5, 1.5), this.upgrades.tint = 0, this.upgrades.alpha = 0, this.add.tween(this.upgrades).to({
+        }, 200, Phaser.Easing.Linear.None, !0, 600), this.time.events.add(600, this.playMouthPop), this.upgrades = this.add.image(130, 388, "menu/title.webp", "menu/title/upgrades.webp", this.root), this.upgrades.anchor.set(.5, .5), this.upgrades.scale.set(1.5, 1.5), this.upgrades.tint = 0, this.upgrades.alpha = 0, this.add.tween(this.upgrades).to({
             alpha: 1
         }, 100, Phaser.Easing.Linear.None, !0, 900), this.add.tween(this.upgrades.scale).to({
             x: 1,
             y: 1
-        }, 200, Phaser.Easing.Linear.None, !0, 900), this.time.events.add(900, this.playMouthPop), this.add.image(279, 392, "menu/title.png", "menu/title/foreground.png", this.root), this.add.image(585, 585, "menu/title.png", "menu/title/water_flame.png", this.root).anchor.set(1, 1), e(this.game, 198, 460, "menu/title.png", "menu/title/buttons/play", this.playClick, this, this.root), this.camera.bounds = null, this.resize(window.innerWidth, window.innerHeight), this.camera.flash(0, 250), s.playMusic("music_menu.mp3", .75)
+        }, 200, Phaser.Easing.Linear.None, !0, 900), this.time.events.add(900, this.playMouthPop), this.add.image(279, 392, "menu/title.webp", "menu/title/foreground.webp", this.root), this.add.image(585, 585, "menu/title.webp", "menu/title/water_flame.webp", this.root).anchor.set(1, 1), e(this.game, 198, 460, "menu/title.webp", "menu/title/buttons/play", this.playClick, this, this.root), this.camera.bounds = null, this.resize(window.innerWidth, window.innerHeight), this.camera.flash(0, 250), s.playMusic("music_menu.mp3", .75)
     }, t.prototype.resize = function(t, e) {
         if (this.root) {
             var i = Math.min(t / 600, e / 600);
@@ -22546,25 +22546,25 @@ function() {
         p = window.AT.gui.DifficultyAlert,
         u = window.AT.gui.Gauge,
         b = window.AT.gui.UpgradeableWeapon,
-        m = "menu/upgrades/parts.png",
-        y = "menu/upgrades/parts/tab_weapons.png";
+        m = "menu/upgrades/parts.webp",
+        y = "menu/upgrades/parts/tab_weapons.webp";
     t.prototype.createAchievement = function(t, e, i) {
-        var o = h.isAchievementCompleted(t) ? ".png" : "_disabled.png";
+        var o = h.isAchievementCompleted(t) ? ".webp" : "_disabled.webp";
         this.add.image(e, i, m, "menu/upgrades/parts/achievements/" + t + o, this.performanceTabContents).anchor.set(.5, 1)
     }, t.prototype.createBigPriceLabel = function(t, e, i, o) {
         var s = this.add.text(t, e, i, null, o);
         return s.anchor.set(.5, 1), s.font = "Gunplay", s.fontWeight = "400", s.fontSize = 24, s.fill = "#E9B300", s
     }, t.prototype.createGaugeButton = function(t, e, i, o, s) {
-        i = "menu/upgrades/parts/" + i + ".png";
+        i = "menu/upgrades/parts/" + i + ".webp";
         var n = this.add.button(t, e, m, null, null, i, i, i, i, s),
-            r = this.make.image(9, 9, m, "menu/upgrades/parts/gauge_" + o + ".png");
+            r = this.make.image(9, 9, m, "menu/upgrades/parts/gauge_" + o + ".webp");
         return n.addChild(r), n
     }, t.prototype.create = function() {
         var t = h.current.game;
-        this.stage.backgroundColor = 1609549, this.root = this.add.group(), this.add.image(300, 310, "menu/upgrades/background.png", null, this.root).anchor.set(.5, .5), this.soundCheckbox = new d(this.game, this.root, m, "menu/upgrades/parts/buttons/sound_normal.png", "menu/upgrades/parts/buttons/sound_hover.png", "menu/upgrades/parts/buttons/off.png", "menu/upgrades/parts/buttons/on.png"), this.soundCheckbox.position.set(540, 90), this.soundCheckbox.button.position.y = -9, this.soundCheckbox.checked = h.current.game.sound, this.soundCheckbox.onToggle = l.toggleSound, this.musicCheckbox = new d(this.game, this.root, m, "menu/upgrades/parts/buttons/music_normal.png", "menu/upgrades/parts/buttons/music_hover.png", "menu/upgrades/parts/buttons/off.png", "menu/upgrades/parts/buttons/on.png"), this.musicCheckbox.position.set(578, 90), this.musicCheckbox.button.position.y = -9, this.musicCheckbox.checked = h.current.game.music, this.musicCheckbox.onToggle = l.toggleMusic, this.animatedMoney = {
+        this.stage.backgroundColor = 1609549, this.root = this.add.group(), this.add.image(300, 310, "menu/upgrades/background.webp", null, this.root).anchor.set(.5, .5), this.soundCheckbox = new d(this.game, this.root, m, "menu/upgrades/parts/buttons/sound_normal.webp", "menu/upgrades/parts/buttons/sound_hover.webp", "menu/upgrades/parts/buttons/off.webp", "menu/upgrades/parts/buttons/on.webp"), this.soundCheckbox.position.set(540, 90), this.soundCheckbox.button.position.y = -9, this.soundCheckbox.checked = h.current.game.sound, this.soundCheckbox.onToggle = l.toggleSound, this.musicCheckbox = new d(this.game, this.root, m, "menu/upgrades/parts/buttons/music_normal.webp", "menu/upgrades/parts/buttons/music_hover.webp", "menu/upgrades/parts/buttons/off.webp", "menu/upgrades/parts/buttons/on.webp"), this.musicCheckbox.position.set(578, 90), this.musicCheckbox.button.position.y = -9, this.musicCheckbox.checked = h.current.game.music, this.musicCheckbox.onToggle = l.toggleMusic, this.animatedMoney = {
             value: h.current.game.money,
             tween: null
-        }, this.money = this.add.text(432, 74, "", null, this.root), this.money.anchor.set(1, .5), this.money.font = "Gunplay", this.money.fontWeight = "400", this.money.fontSize = 33, this.money.fill = "#FFB600", this.setMoney(), n(this.game, 25, 523, m, "menu/upgrades/parts/buttons/menu", this.menuClick, this, this.root), n(this.game, 156, 523, m, "menu/upgrades/parts/buttons/stats", this.statsClick, this, this.root), n(this.game, 294, 523, m, "menu/upgrades/parts/buttons/difficulty", this.difficultyClick, this, this.root), n(this.game, 458, 522, m, "menu/upgrades/parts/buttons/play", this.playClick, this, this.root), this.performanceTabContents = this.add.group(this.root), this.performanceTabContents.position.set(10, 192), this.add.image(0, 0, m, "menu/upgrades/parts/performance.png", this.performanceTabContents), this.weaponsTabContents = this.add.group(this.root), this.weaponsTabContents.position.set(10, 192), this.weaponsTabContents.visible = !1, this.add.image(0, 0, m, "menu/upgrades/parts/weapons.png", this.weaponsTabContents), this.performanceTab = this.add.button(10, 140, m, this.performanceClick, this, null, "menu/upgrades/parts/tab_performance_active.png", null, null, this.root), this.performanceTab.onInputDown.add(l.playButtonDown), this.performanceTab.onInputUp.add(l.playButtonUp), this.weaponsTab = this.add.button(301, 140, m, this.weaponsClick, this, null, y, null, null, this.root), this.weaponsTab.onInputDown.add(l.playButtonDown), this.weaponsTab.onInputUp.add(l.playButtonUp), this.tabActive = 0, this.armorPrice = this.createBigPriceLabel(102, 146, this.getUpgradeCost("armor"), this.performanceTabContents), this.sightPrice = this.createBigPriceLabel(223, 146, this.getUpgradeCost("sight"), this.performanceTabContents), this.turretPrice = this.createBigPriceLabel(346, 146, this.getUpgradeCost("turret"), this.performanceTabContents), this.speedPrice = this.createBigPriceLabel(467, 146, this.getUpgradeCost("speed"), this.performanceTabContents), this.armorButton = new u(this.game, 60, 16, "armor", t.armor, this.upgradeClick.bind(this, "armor"), this, this.performanceTabContents), this.sightButton = new u(this.game, 181, 16, "sight", t.sight, this.upgradeClick.bind(this, "sight"), this, this.performanceTabContents), this.turretButton = new u(this.game, 301, 16, "turret", t.turret, this.upgradeClick.bind(this, "turret"), this, this.performanceTabContents), this.speedButton = new u(this.game, 421, 16, "speed", t.speed, this.upgradeClick.bind(this, "speed"), this, this.performanceTabContents), this.createAchievement("hunter", 87, 265), this.createAchievement("destroyer", 186, 265), this.createAchievement("dodger", 283, 265), this.createAchievement("treasurer", 383, 265), this.createAchievement("ultracombo", 480, 265), this.minigun = new b(this.game, 20, 20, "minigun", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), this.shotgun = new b(this.game, 210, 20, "shotgun", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), this.ricochet = new b(this.game, 400, 20, "ricochet", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), this.cannon = new b(this.game, 20, 170, "cannon", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), this.rockets = new b(this.game, 210, 170, "rockets", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), this.laser = new b(this.game, 400, 170, "laser", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), h.current.game.weaponTabOpened ? this.check = null : (this.check = this.add.image(410, 100, m, "menu/upgrades/parts/check.png", this.root), this.add.tween(this.check).to({
+        }, this.money = this.add.text(432, 74, "", null, this.root), this.money.anchor.set(1, .5), this.money.font = "Gunplay", this.money.fontWeight = "400", this.money.fontSize = 33, this.money.fill = "#FFB600", this.setMoney(), n(this.game, 25, 523, m, "menu/upgrades/parts/buttons/menu", this.menuClick, this, this.root), n(this.game, 156, 523, m, "menu/upgrades/parts/buttons/stats", this.statsClick, this, this.root), n(this.game, 294, 523, m, "menu/upgrades/parts/buttons/difficulty", this.difficultyClick, this, this.root), n(this.game, 458, 522, m, "menu/upgrades/parts/buttons/play", this.playClick, this, this.root), this.performanceTabContents = this.add.group(this.root), this.performanceTabContents.position.set(10, 192), this.add.image(0, 0, m, "menu/upgrades/parts/performance.webp", this.performanceTabContents), this.weaponsTabContents = this.add.group(this.root), this.weaponsTabContents.position.set(10, 192), this.weaponsTabContents.visible = !1, this.add.image(0, 0, m, "menu/upgrades/parts/weapons.webp", this.weaponsTabContents), this.performanceTab = this.add.button(10, 140, m, this.performanceClick, this, null, "menu/upgrades/parts/tab_performance_active.webp", null, null, this.root), this.performanceTab.onInputDown.add(l.playButtonDown), this.performanceTab.onInputUp.add(l.playButtonUp), this.weaponsTab = this.add.button(301, 140, m, this.weaponsClick, this, null, y, null, null, this.root), this.weaponsTab.onInputDown.add(l.playButtonDown), this.weaponsTab.onInputUp.add(l.playButtonUp), this.tabActive = 0, this.armorPrice = this.createBigPriceLabel(102, 146, this.getUpgradeCost("armor"), this.performanceTabContents), this.sightPrice = this.createBigPriceLabel(223, 146, this.getUpgradeCost("sight"), this.performanceTabContents), this.turretPrice = this.createBigPriceLabel(346, 146, this.getUpgradeCost("turret"), this.performanceTabContents), this.speedPrice = this.createBigPriceLabel(467, 146, this.getUpgradeCost("speed"), this.performanceTabContents), this.armorButton = new u(this.game, 60, 16, "armor", t.armor, this.upgradeClick.bind(this, "armor"), this, this.performanceTabContents), this.sightButton = new u(this.game, 181, 16, "sight", t.sight, this.upgradeClick.bind(this, "sight"), this, this.performanceTabContents), this.turretButton = new u(this.game, 301, 16, "turret", t.turret, this.upgradeClick.bind(this, "turret"), this, this.performanceTabContents), this.speedButton = new u(this.game, 421, 16, "speed", t.speed, this.upgradeClick.bind(this, "speed"), this, this.performanceTabContents), this.createAchievement("hunter", 87, 265), this.createAchievement("destroyer", 186, 265), this.createAchievement("dodger", 283, 265), this.createAchievement("treasurer", 383, 265), this.createAchievement("ultracombo", 480, 265), this.minigun = new b(this.game, 20, 20, "minigun", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), this.shotgun = new b(this.game, 210, 20, "shotgun", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), this.ricochet = new b(this.game, 400, 20, "ricochet", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), this.cannon = new b(this.game, 20, 170, "cannon", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), this.rockets = new b(this.game, 210, 170, "rockets", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), this.laser = new b(this.game, 400, 170, "laser", this.weaponClick, this.ammoClick, this, this.weaponsTabContents), h.current.game.weaponTabOpened ? this.check = null : (this.check = this.add.image(410, 100, m, "menu/upgrades/parts/check.webp", this.root), this.add.tween(this.check).to({
             y: 110
         }, 1e3, Phaser.Easing.Sinusoidal.InOut, !0, 500, -1).yoyo(!0, 0)), -1 === h.current.game.difficulty && new p(this.game), this.camera.bounds = null, this.resize(window.innerWidth, window.innerHeight), this.camera.flash(0, 250), l.playMusic("music_menu.mp3", .75)
     }, t.prototype.setMoney = function(t) {
@@ -22583,9 +22583,9 @@ function() {
             o = e[t][i[t]];
         o <= i.money ? (this.animatedMoney.value = i.money, i.money -= o, i[t] += 1, h.save(), this[t + "Price"].text = this.getUpgradeCost(t), this[t + "Button"].increase(), this.animateMoney(), l.playSound("buy.mp3")) : (a(this.money), a(this[t + "Price"]), l.playSound("not_available.mp3"))
     }, t.prototype.performanceClick = function() {
-        0 !== this.tabActive && (this.performanceTab.setFrames("menu/upgrades/parts/tab_performance_active.png", "menu/upgrades/parts/tab_performance_active.png", "menu/upgrades/parts/tab_performance_active.png", "menu/upgrades/parts/tab_performance_active.png"), this.weaponsTab.setFrames(y, y, y, y), this.performanceTabContents.visible = !0, this.weaponsTabContents.visible = !1, this.tabActive = 0)
+        0 !== this.tabActive && (this.performanceTab.setFrames("menu/upgrades/parts/tab_performance_active.webp", "menu/upgrades/parts/tab_performance_active.webp", "menu/upgrades/parts/tab_performance_active.webp", "menu/upgrades/parts/tab_performance_active.webp"), this.weaponsTab.setFrames(y, y, y, y), this.performanceTabContents.visible = !0, this.weaponsTabContents.visible = !1, this.tabActive = 0)
     }, t.prototype.weaponsClick = function() {
-        1 !== this.tabActive && (this.performanceTab.setFrames("menu/upgrades/parts/tab_performance.png", "menu/upgrades/parts/tab_performance.png", "menu/upgrades/parts/tab_performance.png", "menu/upgrades/parts/tab_performance.png"), this.weaponsTab.setFrames("menu/upgrades/parts/tab_weapons_active.png", "menu/upgrades/parts/tab_weapons_active.png", "menu/upgrades/parts/tab_weapons_active.png", "menu/upgrades/parts/tab_weapons_active.png"), this.performanceTabContents.visible = !1, this.weaponsTabContents.visible = !0, this.tabActive = 1, this.check && (this.add.tween(this.check).to({
+        1 !== this.tabActive && (this.performanceTab.setFrames("menu/upgrades/parts/tab_performance.webp", "menu/upgrades/parts/tab_performance.webp", "menu/upgrades/parts/tab_performance.webp", "menu/upgrades/parts/tab_performance.webp"), this.weaponsTab.setFrames("menu/upgrades/parts/tab_weapons_active.webp", "menu/upgrades/parts/tab_weapons_active.webp", "menu/upgrades/parts/tab_weapons_active.webp", "menu/upgrades/parts/tab_weapons_active.webp"), this.performanceTabContents.visible = !1, this.weaponsTabContents.visible = !0, this.tabActive = 1, this.check && (this.add.tween(this.check).to({
             alpha: 0
         }, 500, Phaser.Easing.Cubic.Out, !0), h.current.game.weaponTabOpened = !0, h.save()))
     }, t.prototype.weaponClick = function(t) {
@@ -22629,12 +22629,12 @@ function() {
         o = window.AT.audio;
     window.AT.LEVELS;
     t.prototype.create = function() {
-        this.stage.backgroundColor = 1611091, this.root = this.add.group(), this.add.image(-24, -13, "menu/levels.png", "menu/levels/background.png", this.root), e(this.game, 300, 483, "menu/levels.png", "menu/levels/buttons/back_to_upgrades", this.backClick, this, this.root).anchor.x = .5;
+        this.stage.backgroundColor = 1611091, this.root = this.add.group(), this.add.image(-24, -13, "menu/levels.webp", "menu/levels/background.webp", this.root), e(this.game, 300, 483, "menu/levels.webp", "menu/levels/buttons/back_to_upgrades", this.backClick, this, this.root).anchor.x = .5;
         for (var t = 0; t < 15; t++) {
             var s = t <= i.current.game.levels,
                 n = t === i.current.game.levels,
-                r = "menu/levels/buttons/" + (n ? "active" : s ? "normal" : "disabled") + "/" + (t + 1) + ".png",
-                a = this.add.button(133 + t % 5 * 80, 244 + 80 * Math.floor(t / 5), "menu/levels.png", s ? this.selectLevel.bind(this, t + 1) : null, null, null, r, null, this, this.root);
+                r = "menu/levels/buttons/" + (n ? "active" : s ? "normal" : "disabled") + "/" + (t + 1) + ".webp",
+                a = this.add.button(133 + t % 5 * 80, 244 + 80 * Math.floor(t / 5), "menu/levels.webp", s ? this.selectLevel.bind(this, t + 1) : null, null, null, r, null, this, this.root);
             a.anchor.set(.5, .5), a.inputEnabled = s, s && (a.onInputOver.add(this.buttonHover, this), a.onInputOut.add(this.buttonOut, this))
         }
         this.camera.bounds = null, this.resize(window.innerWidth, window.innerHeight), this.camera.flash(0, 250), o.playMusic("music_menu.mp3", .75)
@@ -22673,9 +22673,9 @@ function() {
     var e = window.AT.common.button,
         i = window.AT.audio;
     t.prototype.preload = function() {
-        this.load.image("menu/congratulations.png", "images/menu/congratulations.png")
+        this.load.image("menu/congratulations.webp", "images/menu/congratulations.webp")
     }, t.prototype.create = function() {
-        this.stage.backgroundColor = 1018441, this.root = this.add.group(), this.add.image(300, 300, "menu/congratulations.png", null, this.root).anchor.set(.5, .5), e(this.game, 300, 450, "game.png", "game/buttons/menu", this.menuClick, this, this.root).anchor.set(.5, .5), this.camera.bounds = null, this.resize(window.innerWidth, window.innerHeight), this.camera.flash(0, 250), i.playMusic("music_congratulations.mp3")
+        this.stage.backgroundColor = 1018441, this.root = this.add.group(), this.add.image(300, 300, "menu/congratulations.webp", null, this.root).anchor.set(.5, .5), e(this.game, 300, 450, "game.webp", "game/buttons/menu", this.menuClick, this, this.root).anchor.set(.5, .5), this.camera.bounds = null, this.resize(window.innerWidth, window.innerHeight), this.camera.flash(0, 250), i.playMusic("music_congratulations.mp3")
     }, t.prototype.menuClick = function() {
         this.camera.fade(0, 250), this.camera.onFadeComplete.addOnce(this.next, this), i.stopMusic()
     }, t.prototype.next = function() {
@@ -22745,7 +22745,7 @@ function() {
         U = window.AT.gui.Achievements,
         J = window.AT.gui.HUD,
         N = [0, 90, 180, 270],
-        W = ["game/wall_0.png", "game/wall_1.png", "game/wall_2.png"];
+        W = ["game/wall_0.webp", "game/wall_1.webp", "game/wall_2.webp"];
     o.TILE_SIZE = 52, o.DIFFICULTIES = [.8, 1, 1.2], o.onCreate = function() {}, o.onUpdate = function() {}, o.onRender = function() {}, o.tileToPx = o.prototype.tileToPx = function(t) {
         return 52 * t + 26 - 52
     }, o.pxToTile = o.prototype.pxToTile = function(t) {
@@ -22778,13 +22778,13 @@ function() {
         for (var i = 0; i < this.player.weapons.length; i++) this.player.weapons[i] && this.weaponsLayer.add(this.player.weapons[i]);
         this.player.events.onKilled.add(this.playerKilled, this)
     }, o.prototype.createTile = function(t, e, i) {
-        var s = this.add.image(o.tileToPx(t), o.tileToPx(e), "game.png", i, this.sceneryLayer);
+        var s = this.add.image(o.tileToPx(t), o.tileToPx(e), "game.webp", i, this.sceneryLayer);
         return s.anchor.set(.5, .5), s.scale.set(this.rnd.sign(), this.rnd.sign()), s.angle = this.rnd.pick(N), s
     }, o.prototype.createGrass = function(t, e, i) {
-        var o = this.createTile(t, e, "grass" === i ? "game/ground_0.png" : "game/ground_1.png");
+        var o = this.createTile(t, e, "grass" === i ? "game/ground_0.webp" : "game/ground_1.webp");
         if (Math.random() > .6) {
             var s = Phaser.Utils.pad(this.rnd.between(0, 24), 2, "0", 1),
-                n = this.add.image(o.position.x + this.rnd.realInRange(-16, 16), o.position.y + this.rnd.realInRange(-16, 16), "game.png", "game/debris/" + s + ".png", this.sceneryLayer);
+                n = this.add.image(o.position.x + this.rnd.realInRange(-16, 16), o.position.y + this.rnd.realInRange(-16, 16), "game.webp", "game/debris/" + s + ".webp", this.sceneryLayer);
             n.anchor.set(.5, .5), n.angle = this.rnd.angle()
         }
         return o
@@ -22888,28 +22888,28 @@ function() {
         return e && n.onDown.add(e.bind.apply(e, [i].concat(o))), this.input.keyboard.addKeyCapture(s), n
     }, o.prototype.createDisappearingEmitter = function() {
         var t = new d(this.game, 0, 0, 20);
-        return t.makeParticles("game.png", ["game/particles/disappearing.png"]), t.setAlpha(1, .05, 200), t.setRotation(0, 0), t.setScale(.5, 1.5, .5, 1.5, 200), t.setXSpeed(0, 0), t.setYSpeed(0, 0), t.gravity = 0, t.lifespan = 200, this.objectsLayer.add(t), t
+        return t.makeParticles("game.webp", ["game/particles/disappearing.webp"]), t.setAlpha(1, .05, 200), t.setRotation(0, 0), t.setScale(.5, 1.5, .5, 1.5, 200), t.setXSpeed(0, 0), t.setYSpeed(0, 0), t.gravity = 0, t.lifespan = 200, this.objectsLayer.add(t), t
     }, o.prototype.createStarEmitter = function() {
         var t = new d(this.game, 0, 0, 20);
-        return t.makeParticles("game.png", ["game/particles/star_coin.png", "game/particles/star_enemy.png", "game/particles/star_laser.png", "game/particles/star_object.png"]), t.setAlpha(1, .05, 200), t.setRotation(-720, 720), t.setXSpeed(0, 0), t.setYSpeed(0, 0), t.gravity = 0, t.lifespan = 200, this.objectsLayer.add(t), t
+        return t.makeParticles("game.webp", ["game/particles/star_coin.webp", "game/particles/star_enemy.webp", "game/particles/star_laser.webp", "game/particles/star_object.webp"]), t.setAlpha(1, .05, 200), t.setRotation(-720, 720), t.setXSpeed(0, 0), t.setYSpeed(0, 0), t.gravity = 0, t.lifespan = 200, this.objectsLayer.add(t), t
     }, o.prototype.createSparkEmitter = function() {
         var t = new d(this.game, 0, 0, 20);
-        return t.makeParticles("game.png", ["game/particles/spark_0.png", "game/particles/spark_1.png", "game/particles/spark_2.png", "game/particles/spark_3.png"]), t.setAlpha(1, .05, 200), t.setRotation(0, 0), t.setXSpeed(0, 0), t.setYSpeed(0, 0), t.gravity = 0, t.lifespan = 200, this.objectsLayer.add(t), t
+        return t.makeParticles("game.webp", ["game/particles/spark_0.webp", "game/particles/spark_1.webp", "game/particles/spark_2.webp", "game/particles/spark_3.webp"]), t.setAlpha(1, .05, 200), t.setRotation(0, 0), t.setXSpeed(0, 0), t.setYSpeed(0, 0), t.gravity = 0, t.lifespan = 200, this.objectsLayer.add(t), t
     }, o.prototype.createSmokeEmitter = function() {
         var t = new d(this.game, 0, 0, 20);
-        return t.makeParticles("game.png", ["game/particles/smoke_0.png", "game/particles/smoke_1.png", "game/particles/smoke_2.png", "game/particles/smoke_3.png"]), t.setAlpha(1, .05, 333), t.setRotation(-360, 360), t.setXSpeed(-50, 50), t.setYSpeed(-50, 50), t.gravity = 0, t.lifespan = 333, this.objectsLayer.add(t), t
+        return t.makeParticles("game.webp", ["game/particles/smoke_0.webp", "game/particles/smoke_1.webp", "game/particles/smoke_2.webp", "game/particles/smoke_3.webp"]), t.setAlpha(1, .05, 333), t.setRotation(-360, 360), t.setXSpeed(-50, 50), t.setYSpeed(-50, 50), t.gravity = 0, t.lifespan = 333, this.objectsLayer.add(t), t
     }, o.prototype.createBoardEmitter = function() {
         var t = new d(this.game, 0, 0, 12);
-        return t.makeParticles("game.png", ["game/particles/board.png"]), t.setAlpha(1, .05, 333), t.setRotation(-1080, 1080), t.setXSpeed(-100, 100), t.setYSpeed(-100, 100), t.gravity = 0, t.lifespan = 333, this.objectsLayer.add(t), t
+        return t.makeParticles("game.webp", ["game/particles/board.webp"]), t.setAlpha(1, .05, 333), t.setRotation(-1080, 1080), t.setXSpeed(-100, 100), t.setYSpeed(-100, 100), t.gravity = 0, t.lifespan = 333, this.objectsLayer.add(t), t
     }, o.prototype.createIceEmitter = function() {
         var t = new d(this.game, 0, 0, 48);
-        return t.makeParticles("game.png", ["game/particles/ice.png"]), t.setAlpha(1, .05, 333), t.setRotation(-1080, 1080), t.setXSpeed(-100, 100), t.setYSpeed(-100, 100), t.gravity = 0, t.lifespan = 333, this.objectsLayer.add(t), t
+        return t.makeParticles("game.webp", ["game/particles/ice.webp"]), t.setAlpha(1, .05, 333), t.setRotation(-1080, 1080), t.setXSpeed(-100, 100), t.setYSpeed(-100, 100), t.gravity = 0, t.lifespan = 333, this.objectsLayer.add(t), t
     }, o.prototype.createExplosionEmitter = function() {
         var t = new d(this.game, 0, 0, 20);
         return t.particleClass = p, t.makeParticles(), t.setRotation(0, 0), t.setScale(1.25, 1.25, 1.25, 1.25), t.setXSpeed(0, 0), t.setYSpeed(0, 0), t.gravity = 0, t.lifespan = 400, this.objectsLayer.add(t), t
     }, o.prototype.createCollectiblesEmitter = function() {
         var t = new d(this.game, 0, 0, 20);
-        return t.makeParticles("game.png", ["game/bonuses/coin.png", "game/bonuses/health.png", "game/bonuses/ammo_shotgun.png", "game/bonuses/ammo_ricochet.png", "game/bonuses/ammo_cannon.png", "game/bonuses/ammo_rockets.png", "game/bonuses/ammo_laser.png"]), t.setAlpha(1, 0, 700), t.setRotation(0, 0), t.setXSpeed(0, 0), t.setYSpeed(0, 0), t.gravity = 0, t.lifespan = 700, this.hudLayer.add(t), t
+        return t.makeParticles("game.webp", ["game/bonuses/coin.webp", "game/bonuses/health.webp", "game/bonuses/ammo_shotgun.webp", "game/bonuses/ammo_ricochet.webp", "game/bonuses/ammo_cannon.webp", "game/bonuses/ammo_rockets.webp", "game/bonuses/ammo_laser.webp"]), t.setAlpha(1, 0, 700), t.setRotation(0, 0), t.setXSpeed(0, 0), t.setYSpeed(0, 0), t.gravity = 0, t.lifespan = 700, this.hudLayer.add(t), t
     }, o.prototype.assignPointer = function(t) {
         t.isMouse || (!this.movePointer && t.x < .5 * window.innerWidth ? this.movePointer = t : !this.aimPointer && t.x > .5 * window.innerWidth && (this.aimPointer = t))
     }, o.prototype.forgetPointer = function(t) {
@@ -22919,7 +22919,7 @@ function() {
             d = this.width = this.strings[2].length,
             c = this.height = this.strings.length - 2,
             p = this.strings[1];
-        this.stage.backgroundColor = 0, this.root = this.add.group(this.world, "root"), this.root.preUpdate = t, this.root.update = e, this.root.postUpdate = i, this.hudLayer = this.add.group(this.stage, "hudLayer"), this.topLayer = this.add.group(this.stage, "topLayer"), this.resize(window.innerWidth, window.innerHeight), this.sceneryLayer = new Phaser.Group(this.game, null), this.sceneryImage = this.make.image(-r, -r), this.root.add(this.sceneryImage), this.groundLayer = this.add.group(this.root, "groundLayer"), this.objectsLayer = this.add.group(this.root, "objectsLayer"), this.weaponsLayer = this.add.group(this.root, "weaponsLayer"), this.explosions = new g(this.game, this.root), this.touchAimCrosshair = this.make.image(0, 0, "game.png", "game/hud/crosshair.png"), this.touchAimCrosshair.anchor.set(.5, .5), this.touchAimCrosshair.visible = !1, this.topLayer.addChild(this.touchAimCrosshair), this.hud = new J(this.game, this.hudLayer), this.hud.position.set(0, -1), this.hud.pauseCheckbox.onToggle = this.pauseToggle.bind(this), this.hud.menuButton.onInputUp.add(this.showAbandonAlert, this), this.achievements = new U(this.game, this.hudLayer), this.fog = new _(this.game, this.root, 1, 1, d - 2, c - 2, r), this.physics.box2d.ptmRatio = r, this.physics.box2d.paused = !1, this.world.setBounds(0, 0, (d - 2) * r, (c - 2) * r), this.walls = new Phaser.Physics.Box2D.Body(this.game, null, 0, 0, 2), this.walls.static = !0, this._walls = s(d, c, !1), this.objects = s(d, c, null), this.grid = s(d, c, 0), this.enemies = [];
+        this.stage.backgroundColor = 0, this.root = this.add.group(this.world, "root"), this.root.preUpdate = t, this.root.update = e, this.root.postUpdate = i, this.hudLayer = this.add.group(this.stage, "hudLayer"), this.topLayer = this.add.group(this.stage, "topLayer"), this.resize(window.innerWidth, window.innerHeight), this.sceneryLayer = new Phaser.Group(this.game, null), this.sceneryImage = this.make.image(-r, -r), this.root.add(this.sceneryImage), this.groundLayer = this.add.group(this.root, "groundLayer"), this.objectsLayer = this.add.group(this.root, "objectsLayer"), this.weaponsLayer = this.add.group(this.root, "weaponsLayer"), this.explosions = new g(this.game, this.root), this.touchAimCrosshair = this.make.image(0, 0, "game.webp", "game/hud/crosshair.webp"), this.touchAimCrosshair.anchor.set(.5, .5), this.touchAimCrosshair.visible = !1, this.topLayer.addChild(this.touchAimCrosshair), this.hud = new J(this.game, this.hudLayer), this.hud.position.set(0, -1), this.hud.pauseCheckbox.onToggle = this.pauseToggle.bind(this), this.hud.menuButton.onInputUp.add(this.showAbandonAlert, this), this.achievements = new U(this.game, this.hudLayer), this.fog = new _(this.game, this.root, 1, 1, d - 2, c - 2, r), this.physics.box2d.ptmRatio = r, this.physics.box2d.paused = !1, this.world.setBounds(0, 0, (d - 2) * r, (c - 2) * r), this.walls = new Phaser.Physics.Box2D.Body(this.game, null, 0, 0, 2), this.walls.static = !0, this._walls = s(d, c, !1), this.objects = s(d, c, null), this.grid = s(d, c, 0), this.enemies = [];
         for (var u = 0; u < c; u++)
             for (var b = 0; b < d; b++) {
                 var m = this.strings[u + 2][b];
@@ -23063,7 +23063,7 @@ function() {
     }, o.prototype.collect = function(t) {
         if (t instanceof v) {
             var e = 12 * (1 + .8567 * this.index) * this.difficulty;
-            this.profit += e, a.current.stats.coinsCollected += 1, a.current.stats.moneyEarned += e, this.hud.showProfit(this.profit), this.starEmitter.emitParticle(t.position.x, t.position.y, "game.png", "game/particles/star_object.png"), this.summaryAlert && this.summaryAlert.updateProfit(this.profit)
+            this.profit += e, a.current.stats.coinsCollected += 1, a.current.stats.moneyEarned += e, this.hud.showProfit(this.profit), this.starEmitter.emitParticle(t.position.x, t.position.y, "game.webp", "game/particles/star_object.webp"), this.summaryAlert && this.summaryAlert.updateProfit(this.profit)
         }
         if (!(t instanceof w)) {
             var i = this.root.scale.x,
@@ -23072,7 +23072,7 @@ function() {
                 n = (t.position.y * i - this.camera.view.y - this.hudLayer.position.y) / o,
                 r = 1.4 * (-100 - s),
                 h = 1.4 * (-100 - n);
-            this.collectiblesEmitter.setXSpeed(r, r), this.collectiblesEmitter.setYSpeed(h, h), this.collectiblesEmitter.setScale(t.scale.x, .99 * t.scale.x, t.scale.y, .99 * t.scale.y, 0), this.collectiblesEmitter.emitParticle(s, n, "game.png", t.constructor.FRAME_NAME)
+            this.collectiblesEmitter.setXSpeed(r, r), this.collectiblesEmitter.setYSpeed(h, h), this.collectiblesEmitter.setScale(t.scale.x, .99 * t.scale.x, t.scale.y, .99 * t.scale.y, 0), this.collectiblesEmitter.emitParticle(s, n, "game.webp", t.constructor.FRAME_NAME)
         }
     }, o.prototype.increaseKillCount = function() {
         this.kills += 1, this.increaseCombo()
