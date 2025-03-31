@@ -487,8 +487,20 @@
   },
   {
     "name": "Getaway Shootout",
-    "url": "/misc/play/getaway-shootout.html",
-    "image": "/misc/getaway-shootout/getaway.avif",
+    "url": "/misc/play/?title=Getaway Shootout&author=New Eich Games&link=getaway-shootout",
+    "image": "/misc/getaway-shootout/img.webp",
+    "usesProxy": false
+  },
+  {
+    "name": "State IO",
+    "url": "/misc/stateio/index.html",
+    "image": "/misc/stateio/img.webp",
+    "usesProxy": false
+  },
+  {
+    "name": "Light The Lamp",
+    "url": "/misc/play/?title=Light The Lamp&author=Eray Zesen&link=lightthelamp",
+    "image": "/misc/lightthelamp/img.webp",
     "usesProxy": false
   },
   {
@@ -1177,7 +1189,7 @@
   },
   {
     "name": "Roblox",
-    "url": "https://nowgg.lol/",
+    "url": "https://www.easyfun.gg/embed/roblox.html",
     "image": "/misc/roblos/rbx.jpeg",
     "usesProxy": true
   },
