@@ -20,7 +20,7 @@
   height: 34vw;
   background-color: #444;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
 }
 #gameframe .game iframe {
   width: 72.6vw;
@@ -32,18 +32,18 @@
   width: 100%;
   height: 2.3vw;
   display: flex;
-  align-items: center;
+  align-items: right;
   padding-bottom: 1.5vh;
 }
 #gameframe .options .left {
   display: flex;
-  align-items: center;
+  align-items: right;
 }
 #gameframe .options .right {
   display: flex;
   margin-top: 2.2vw;
   margin-right: 1.5vw;
-  align-items: center;
+  align-items: right;
   justify-content: flex-end;
 }
 .addisplay {
@@ -100,14 +100,14 @@
 .adtext {
   font-size: 0.5vw;
   text-transform: uppercase;
-  text-align: center;
+  text-align: right;
   opacity: 0.7;
   letter-spacing: 0.05vw;
   position: absolute;
   right: 15vw;
   padding-top: 10px;
   margin-top: 32.2vw;
-  transform-origin: right center;
+  transform-origin: right right;
 }
 
 #gameframe .options .left,
@@ -117,7 +117,7 @@
 }
 #gameframe .options .right {
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: flex-end;
 }
 #gameframe .options .right .game-button {
@@ -161,14 +161,14 @@
 .addisplay .adtext {
   font-size: 0.5vw;
   text-transform: uppercase;
-  text-align: center;
+  text-align: right;
   opacity: 0.7;
   letter-spacing: 0.05vw;
   position: absolute;
   right: 15vw;
   padding-top: 10px;
   margin-top: 32.2vw;
-  transform-origin: right center;
+  transform-origin: right right;
 }
 
 .bottom-addisplay {
@@ -188,12 +188,12 @@
 .bottom-addisplay .adtext {
   font-size: 0.5vw;
   text-transform: uppercase;
-  text-align: center;
+  text-align: right;
   opacity: 0.7;
   letter-spacing: 0.05vw;
   position: absolute;
   right: 0;
   left: 0;
   bottom: -15px;
-  transform-origin: center;
+  transform-origin: right;
 }
