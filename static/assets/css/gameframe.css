@@ -1,7 +1,4 @@
 #gameframe {
-  margin-top: 1vw;
-  margin-bottom: 6vw;
-  margin-right: 23vw;
   display: flex;
 }
 #gameframe .gameDisplay {
