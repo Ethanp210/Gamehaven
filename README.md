@@ -1,6 +1,7 @@
 # Gamehaven
 
 Please note, this is not meant to take RedNotSus's work and call it my own. This is in case your school automatically blocks any website that says REDSEXPLOITCORNER. Again full credit to him and the team and everyone over at 55gms. 
+
 Welcome to Gamehaven, a website for unblocked games, apps, and proxies. Our goal is to provide a safe and enjoyable experience for users who want to access blocked content.
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/55gms/55gms)
