@@ -1,6 +1,6 @@
-# 55GMS
+# Gamehaven
 
-Welcome to 55GMS, a website for unblocked games, apps, and proxies. Our goal is to provide a safe and enjoyable experience for users who want to access blocked content.
+Welcome to Gamehaven, a website for unblocked games, apps, and proxies. Our goal is to provide a safe and enjoyable experience for users who want to access blocked content.
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/55gms/55gms)
 ![Commit](https://img.shields.io/github/commit-activity/w/55gms/55gms)
@@ -9,7 +9,7 @@ Welcome to 55GMS, a website for unblocked games, apps, and proxies. Our goal is 
 
 ## Contributing
 
-Contributing to 55GMS is simple, all you need is to fork this repository and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) that we will review and maybe merge.
+Contributing to Gamehaven is simple, all you need is to fork this repository and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) that we will review and maybe merge.
 
 ## Deploying
 
@@ -54,7 +54,7 @@ Instructions to deploy to a VPS can be found on the wiki, or <a href='https://gi
 ![Alt](https://repobeats.axiom.co/api/embed/aa0d492e7df85dd81f1e15509991745130be77cd.svg "Repobeats analytics image")
 
 ## Credits
-
+- [55GMS](https://github.com/55gms/55GMS) - Original code, supplies games, and keeps the movies and such working. 
 - [Interstellar](https://github.com/UseInterstellar/Interstellar) - Some of the proxy code and nav
 - [3kh0](https://gitlab.com/3kh0/3kh0-assets) - Some of games src
 
